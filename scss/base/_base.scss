@@ -3,63 +3,81 @@ html {
   padding: 0;
     body {
           main {
-            max-width: 380px;
-            margin: auto;
+            max-width: 350px;
+            padding: 0;
+            margin: 0 auto;
           }
-
     }
 
 }
 
-/*mon test*/
-$test-bg: #a35cdb ;
-.test {
-  background-color: $test-bg;
+.container-darker{
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  background-color:$color-light;
 }
 
-/*mes mixins*/
 
 /* le vrac*/
-/* le boutons gris-violet*/
 
-.container {
-  background-color:$color-light;
-  width: 100%;
-  /*construction*/
-  padding: 2%;
-}
+/* le bouton-a : gris-violet*/
 
+/* la box-prev : pour présenter les différents restaurants*/
 
-.btn {
+/* le bouton-c : dropdown vert*/
+
+.btn-c {
   background-color: $color-white;
-  width: 20rem;
-  height: 6rem;
+  width: 100%;
+  height: 5rem;
   margin: auto;
-  padding: 0;
+  padding-left: 1rem;
   border-radius: 20px;
-  p {
-    width: fit-content;
-    line-height : 2.2em;
-    margin: 1rem 1rem 0 0;
-    @include main_typo;
-  }
+   &_container {
+     width: 100%;
+     p {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       @include main_typo;
+     }
+     &_heading {
+       line-height: 3rem;
+     }
+     &_definition {
+     }
+     &_price {
+      flex-shrink: 7;
+     }
+   }
+
+  /* le bouton vert*/
   &_drop-over{
+    width: 0;
+    height: 100%;
     display: initial;
-    width: 6rem;
-    height: 6rem;
     border-radius: 0 20px 20px 0;
     padding: 0;
-    opacity: 1;
     background: $color-accent-light;
       svg {
         color: $color-white;
       }
+    }
+  }
+
+/*L'animation*/
+.btn-c:hover {
+
+  .btn-c_drop-over {
+    width: 30%;
   }
 }
 
 
 
-/* le bouton vert*/
+
+
 
 
 
