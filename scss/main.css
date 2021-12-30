@@ -1,8 +1,10 @@
 @charset "UTF-8";
 /*--------------------------mes variables*/
 /*MES COULEURS*/
+/*--------------------------------MES MIXINS*/
 /*MES FONTS*/
-/*MES MIXINS*/
+/* ici, l'on peut améliorer ce code avec des variables, relire la partie sur les mixins*/
+/*Mes radius*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 html, body {
   font-family: "Montserrat", sans-serif;
@@ -25,27 +27,83 @@ html, body {
 html {
   margin: 0;
   padding: 0;
+  background: #f6f3e3;
 }
 html body main {
   max-width: 350px;
-  padding: 0;
+  height: 100vh;
+  padding: 20px 0;
   margin: 0 auto;
+  background: #e1e9f8;
 }
 
-.container-darker {
+.container {
   width: 100%;
-  height: 100%;
-  padding: 2%;
+  margin: 0;
+  padding: 10% 2%;
+}
+.container--darker {
   background-color: #F7F7F7;
 }
+.container--white {
+  background: #fff;
+}
 
-/* le vrac*/
+/*------------------------------------- le vrac*/
+/*le CTA*/
 /* le bouton-a : gris-violet*/
+.btn-a {
+  background-color: #F7F7F7;
+  width: 95%;
+  height: 5rem;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: baseline;
+}
+.btn-a_txt {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  align-self: center;
+}
+.btn-a_icone {
+  align-self: center;
+}
+.btn-a:hover {
+  background: #fae9fb;
+}
+
+.list-number {
+  width: 2rem;
+  height: fit-content;
+  padding: 2%;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  background: #9B77D4;
+  display: flex;
+  justify-content: center;
+  align-content: baseline;
+  align-self: center;
+  margin-left: -3rem;
+  z-index: 99;
+}
+
 /* la box-prev : pour présenter les différents restaurants*/
 /* le bouton-c : dropdown vert*/
 .btn-c {
   background-color: #fff;
-  width: 100%;
+  width: 95%;
   height: 5rem;
   margin: auto;
   padding-left: 1rem;

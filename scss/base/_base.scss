@@ -1,27 +1,80 @@
 html {
   margin: 0;
   padding: 0;
+  background: #f6f3e3;
     body {
           main {
             max-width: 350px;
-            padding: 0;
+            height: 100vh;
+            padding: 20px 0;
             margin: 0 auto;
+            background: #e1e9f8;
           }
     }
 
 }
 
-.container-darker{
+.container {
   width: 100%;
-  height: 100%;
-  padding: 2%;
-  background-color:$color-light;
+  margin: 0;
+  padding: 10% 2%;
+    &--darker{
+    background-color:$color-light;
+    }
+    &--white {
+      background: $color-white;
+    }
 }
 
 
-/* le vrac*/
+/*------------------------------------- le vrac*/
+
+/*le CTA*/
+
+.button {
+
+}
 
 /* le bouton-a : gris-violet*/
+
+.btn-a {
+  background-color: $color-light;
+  width: 95%;
+  height: 5rem;
+  @include radius_a_c;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: baseline;
+    &_txt {
+      @include main_typo;
+      align-self: center;
+    }
+    &_icone{
+      align-self: center;
+    }
+    &:hover {
+      background: pastel($color-secondary);
+    }
+}
+
+.list-number {
+  width: 2rem;
+  height: fit-content;
+  padding: 2%;
+  @include radius_round;
+  @include typo_white;
+  text-align: center;
+  background: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-content: baseline;
+  align-self: center;
+  margin-left: -3rem;
+  z-index: 99;
+}
+
 
 /* la box-prev : pour présenter les différents restaurants*/
 
@@ -29,11 +82,11 @@ html {
 
 .btn-c {
   background-color: $color-white;
-  width: 100%;
+  width: 95%;
   height: 5rem;
   margin: auto;
   padding-left: 1rem;
-  border-radius: 20px;
+  @include radius_a_c;
    &_container {
      width: 100%;
      p {
@@ -57,7 +110,7 @@ html {
     width: 0;
     height: 100%;
     display: initial;
-    border-radius: 0 20px 20px 0;
+    @include radius_hover;
     padding: 0;
     background: $color-accent-light;
       svg {

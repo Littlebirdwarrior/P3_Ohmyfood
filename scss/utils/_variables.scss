@@ -3,17 +3,18 @@
 /*MES COULEURS*/
 
 $color-primary: #9B77D4;
-$color-primary-light: #F3E7FF;
 $color-secondary: #DA86DF;
 $color-accent-light: #8ADDC6;
-$color-accent-dark: #197F5D;
 $color-light: #F7F7F7;
 $color-dark: #393939;
 $color-white: #fff;
 $color-black: #000;
 
+/*--------------------------------MES MIXINS*/
 
 /*MES FONTS*/
+
+/* ici, l'on peut améliorer ce code avec des variables, relire la partie sur les mixins*/
 
 @mixin main_typo{
   font-family: "Roboto", sans-serif;
@@ -23,4 +24,30 @@ $color-black: #000;
   font-size: 15px;
 }
 
-/*MES MIXINS*/
+@mixin typo_white {
+  @include main_typo;
+  color: $color-white;
+}
+
+@mixin typo_bold {
+  @include main_typo;
+  font-weight: 700;
+}
+
+/*Mes radius*/
+
+$border-radius-btn:  0 15px 20px 50px;
+
+@mixin radius_a_c {
+  border-radius: nth($border-radius-btn, 3);
+}
+
+@mixin radius_hover {
+  border-radius: 0 nth($border-radius-btn, 3) nth($border-radius-btn, 3) 0;
+}
+
+@mixin radius_round {
+  border-radius: nth($border-radius-btn, 4);
+}
+
+
