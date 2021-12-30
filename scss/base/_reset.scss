@@ -1,0 +1,23 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+p , i, a {
+  font-style: normal;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}
