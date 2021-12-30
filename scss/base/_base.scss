@@ -1,3 +1,4 @@
+
 html {
   margin: 0;
   padding: 0;
@@ -32,7 +33,21 @@ html {
 /*le CTA*/
 
 .button {
-
+  display: block;
+  width: fit-content;
+  height: 3rem;
+  margin: 10px auto;
+  padding: 1rem 2rem;
+  font-size: $font-size-medium;
+  letter-spacing: 1px;
+  text-align: center;
+  @include typo_white;
+  @include typo_bold;
+  @include radius_round;
+  background: linear-gradient(45deg, $color-secondary,$color-primary);
+      &:hover{
+        background: linear-gradient(45deg, $color-primary,$color-secondary);
+      }
 }
 
 /* le bouton-a : gris-violet*/
@@ -65,6 +80,7 @@ html {
   padding: 2%;
   @include radius_round;
   @include typo_white;
+  font-size: $font-size-small;
   text-align: center;
   background: $color-primary;
   display: flex;
@@ -77,6 +93,8 @@ html {
 
 
 /* la box-prev : pour présenter les différents restaurants*/
+
+
 
 /* le bouton-c : dropdown vert*/
 
