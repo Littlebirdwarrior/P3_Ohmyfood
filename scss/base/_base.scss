@@ -1,0 +1,66 @@
+html {
+  margin: 0;
+  padding: 0;
+    body {
+          main {
+            max-width: 380px;
+            margin: auto;
+          }
+
+    }
+
+}
+
+/*mon test*/
+$test-bg: #a35cdb ;
+.test {
+  background-color: $test-bg;
+}
+
+/*mes mixins*/
+
+/* le vrac*/
+/* le boutons gris-violet*/
+
+.container {
+  background-color:$color-light;
+  width: 100%;
+  /*construction*/
+  padding: 2%;
+}
+
+
+.btn {
+  background-color: $color-white;
+  width: 20rem;
+  height: 6rem;
+  margin: auto;
+  padding: 0;
+  border-radius: 20px;
+  p {
+    width: fit-content;
+    line-height : 2.2em;
+    margin: 1rem 1rem 0 0;
+    @include main_typo;
+  }
+  &_drop-over{
+    display: initial;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0 20px 20px 0;
+    padding: 0;
+    opacity: 1;
+    background: $color-accent-light;
+      svg {
+        color: $color-white;
+      }
+  }
+}
+
+
+
+/* le bouton vert*/
+
+
+
+

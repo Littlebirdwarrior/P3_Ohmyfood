@@ -1,106 +1,29 @@
-@charset "UTF-8";
-/*--------------------------mes variables*/
-/*MES COULEURS*/
-/*MES FONTS*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
-html, body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  height: 100%;
-  display: flex;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-}
-html body main {
-  max-width: 380px;
-  margin: auto;
-}
-
-/*mon test*/
-.test {
-  background-color: #a35cdb;
-}
-
-/*mes mixins*/
-/* le vrac*/
-/* le boutons gris-violet*/
-.container {
-  background-color: #F7F7F7;
-  width: 100%;
-  /*construction*/
-  padding: 2%;
-}
-
-.btn {
-  background-color: #fff;
-  width: 20rem;
-  height: 6rem;
-  margin: auto;
-  padding: 0;
-  border-radius: 20px;
-}
-.btn p {
-  width: fit-content;
-  line-height: 2.2em;
-  margin: 1rem 1rem 0 0;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-}
-.btn p_bold {
-  font-weight: 700;
-}
-.btn_drop-over {
-  display: initial;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 0 20px 20px 0;
-  padding: 0;
-  opacity: 1;
-  background: #8ADDC6;
-}
-.btn_drop-over svg {
-  color: #fff;
-}
-
-/* le bouton vert*/
 /*---------------------------------------- les flexboxes*/
+
 .flex {
   display: flex;
 }
 
 /*flex-direction*/
+
 .row {
-  flex-direction: row;
+  flex-direction:row;
 }
 
 .column {
-  flex-direction: column;
+  flex-direction:column;
 }
 
 .row-reverse {
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
 }
 
 .column-reverse {
-  flex-direction: column-reverse;
+  flex-direction:column-reverse;
 }
 
 /*flex-wrap §flex-flow*/
+
 .nowrap {
   flex-wrap: nowrap;
 }
@@ -122,6 +45,7 @@ html body main {
 }
 
 /*justify content*/
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -143,6 +67,7 @@ html body main {
 }
 
 /*align-items*/
+
 .items-start {
   align-items: flex-start;
 }
@@ -160,6 +85,7 @@ html body main {
 }
 
 /*align content*/
+
 .content-start {
   align-content: start;
 }
@@ -181,6 +107,7 @@ html body main {
 }
 
 /*align-self*/
+
 .self-start {
   align-self: flex-start;
 }
@@ -202,15 +129,17 @@ html body main {
 }
 
 /*order*/
+
 .order-1 {
-  order: 1;
+  order:1;
 }
 
-.order-2 {
-  order: 2;
+.order-2{
+  order:2
 }
 
 /*flex-grow & flex-shink */
+
 .grow-2 {
   flex-grow: 1;
 }
@@ -224,16 +153,17 @@ html body main {
 }
 
 /*---------------------------------------- les responsives*/
+
 .resp-column {
-  flex-direction: column;
+  flex-direction:column;
 }
 
 .resp-row {
-  flex-direction: row;
+  flex-direction:row;
 }
 
 .resp-row-reverse {
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
 }
 
 .resp-nowrap {
@@ -243,5 +173,3 @@ html body main {
 .resp-wrap {
   flex-wrap: wrap;
 }
-
-/*# sourceMappingURL=main.css.map */
