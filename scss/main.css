@@ -1,18 +1,26 @@
 @charset "UTF-8";
-/*--------------------------mes variables*/
-/*MES COULEURS*/
-/*--------------------------------MES MIXINS*/
-/*MES FONTS*/
-/* ici, l'on peut améliorer ce code avec des variables, relire la partie sur les mixins*/
-/*Mes radius*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 html, body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+div, figure, img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+p, i, a, h3 {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
 }
 
 * {
@@ -24,6 +32,13 @@ html, body {
   display: flex;
 }
 
+/*--------------------------mes variables*/
+/*MES COULEURS*/
+/*--------------------------------MES MIXINS*/
+/*MES FONTS*/
+/* ici, l'on peut améliorer ce code avec des variables, relire la partie sur les mixins*/
+/*mes font-size*/
+/*Mes radius*/
 html {
   margin: 0;
   padding: 0;
@@ -51,6 +66,34 @@ html body main {
 
 /*------------------------------------- le vrac*/
 /*le CTA*/
+.button {
+  display: block;
+  width: fit-content;
+  height: 3rem;
+  margin: 10px auto;
+  padding: 1rem 2rem;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #DA86DF, #9B77D4);
+}
+.button:hover {
+  background: linear-gradient(45deg, #9B77D4, #DA86DF);
+}
+
 /* le bouton-a : gris-violet*/
 .btn-a {
   background-color: #F7F7F7;
@@ -89,6 +132,7 @@ html body main {
   font-weight: 300;
   font-size: 15px;
   color: #fff;
+  font-size: 13px;
   text-align: center;
   background: #9B77D4;
   display: flex;
@@ -100,6 +144,65 @@ html body main {
 }
 
 /* la box-prev : pour présenter les différents restaurants*/
+.box-prev {
+  width: 95%;
+  height: 18rem;
+  margin: 10px auto;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.box-prev_figure {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.box-prev_figureimg {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.box-prev_description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  padding: 2% 5%;
+}
+.box-prev_description h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.box-prev_description h3 strong {
+  font-size: 15px;
+}
+.box-prev_description h3 a {
+  border: 1px solid #000;
+}
+.box-prev_description h3 a:hover, .box-prev_description h3 a:active {
+  background: linear-gradient(45deg, #DA86DF, #9B77D4);
+}
+.box-prev_new-tag {
+  width: fit-content;
+  height: fit-content;
+  padding: 2% 4%;
+  border-radius: 3px;
+  background: #8ADDC6;
+  color: #064b37;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+  top: -16rem;
+  left: 70%;
+  z-index: 2;
+}
+
 /* le bouton-c : dropdown vert*/
 .btn-c {
   background-color: #fff;

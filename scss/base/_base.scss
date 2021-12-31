@@ -94,6 +94,59 @@ html {
 
 /* la box-prev : pour présenter les différents restaurants*/
 
+.box-prev {
+  width: 95%;
+  height: 18rem;
+  margin: 10px auto;
+  background: $color-white;
+  overflow: hidden;
+  @include radius_a_c;
+      &_figure {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+            &img {
+              width: 100%;
+              margin: 0;
+              padding: 0;
+            }
+          }
+      &_description {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          line-height: 2rem;
+          padding: 2% 5%;
+            h3{
+              display: flex;
+              justify-content: space-between;
+              strong{
+                font-size: $font-size-courant;
+              }
+              a{border: 1px solid $color-black;
+                  &:hover, &:active{
+                    @include gradient_1;
+                }
+              }
+            }
+      }
+      &_new-tag {
+        width: fit-content;
+        height: fit-content;
+        padding: 2% 4%;
+        border-radius: 3px;
+        background: #8ADDC6;
+        color: #064b37;
+        @include typo_bold;
+        position: relative;
+        top: -16rem;
+        left:70%;
+        z-index:2;
+      }
+}
+
 
 
 /* le bouton-c : dropdown vert*/

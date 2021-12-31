@@ -7,8 +7,17 @@ html, body {
   padding: 0;
 }
 
+div, figure, img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
-p , i, a {
+
+p , i, a, h3 {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   text-decoration: none;
 }
