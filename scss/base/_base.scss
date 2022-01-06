@@ -48,6 +48,8 @@ html {
   background: linear-gradient(45deg, $color-secondary,$color-primary);
       &:hover{
         background: linear-gradient(45deg, $color-primary,$color-secondary);
+        -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
+        animation: bounce-top-fade 1.2s ease-in-out both;
       }
 }
 
@@ -68,10 +70,17 @@ html {
       align-self: center;
     }
     &_icone{
+      color: $color-dark;
+      font-size: 1.2rem;
       align-self: center;
     }
     &:hover {
       background: pastel($color-secondary);
+      -webkit-animation: fadein 2s ease-in; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 2s ease-in; /* Firefox < 16 */
+      -o-animation: fadein 2s ease-in; /* Opera < 12.1 */
+      animation: fadein 2s ease-in;
+
     }
 }
 
@@ -126,9 +135,12 @@ html {
               font-size: $font-size-courant;
               strong{
               }
-              i{
+              svg{
+                  width: 20px;
                   &:hover, &:active{
-                    @include gradient_1;
+                    path {
+                      @include gradient_1;
+                    }
                 }
               }
             }
@@ -158,24 +170,26 @@ html {
   height: 5rem;
   margin: auto;
   padding-left: 1rem;
+  overflow: hidden;
   @include radius_a_c;
    &_container {
-     margin-top: 0.8rem;
+     margin-top: 1.2rem;
      width: 100%;
      p {
        width: 100%;
        padding: 0;
-       @include main_typo;
      }
      &_heading {
        @include typo_bold;
      }
      &_definition {
        margin-top: 0.5rem;
+       overflow: hidden;
      }
      &_price {
-       margin-top: 0.5rem;
-      flex-shrink: 7;
+       margin: 0.5rem 0 1rem 0;
+       flex-shrink: 6;
+       @include typo_bold;
      }
    }
 
@@ -187,19 +201,281 @@ html {
     @include radius_hover;
     padding: 0;
     background: $color-accent-light;
-      svg {
-        color: $color-white;
-      }
+    i {
+      color: $color-white;
+      opacity: 0;
+    }
     }
   }
 
 /*L'animation*/
 .btn-c:hover {
-
+  .btn-c_container_definition{
+    padding: 0 1rem 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .btn-c_drop-over {
     width: 30%;
+    -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
+    animation: scale-up-hor-right 0.5s ease-in-out;
+
+    i {
+      opacity: 1;
+      position: relative;
+      top: 37%;
+      left: 37%;
+      -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+      animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    }
+
+
   }
 }
+
+/* les animations*/
+
+@-webkit-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-up-hor-right {
+  0% {
+    -webkit-transform: translateX(5rem);
+    transform: translateX(5rem);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+@-webkit-keyframes bounce-top-fade  {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0.3;
+  }
+  24% {
+    opacity: 0.8;
+  }
+  40% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@-moz-keyframes bounce-top-fade  {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0.3;
+  }
+  24% {
+    opacity: 0.8;
+  }
+  40% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top-fade  {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0.3;
+  }
+  24% {
+    opacity: 0.8;
+  }
+  40% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  25%   { opacity: 1;
+  75% {opacity: 0.2}
+  100% {opacity: 1}
+  }
+}
+@-moz-keyframes fadein {
+  0% { opacity: 0; }
+  25%   { opacity: 1;
+    75% {opacity: 0.2}
+    100% {opacity: 1}
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.2
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+
 
 
 
