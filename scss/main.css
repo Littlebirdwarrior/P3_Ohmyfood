@@ -5,18 +5,16 @@ html, body {
   font-weight: 300;
   font-style: normal;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-div, figure, img {
+figure, img {
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
 }
 
-p, i, a, h3 {
+p, i, h3 {
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -54,8 +52,8 @@ html body main {
 
 .container {
   width: 100%;
-  margin: 0;
-  padding: 10% 2%;
+  margin: 20px 0;
+  padding: 20px 2%;
 }
 .container--darker {
   background-color: #F7F7F7;
@@ -75,6 +73,7 @@ html body main {
   font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
+  border: none;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   line-height: 1.2rem;
@@ -146,7 +145,7 @@ html body main {
 /* la box-prev : pour présenter les différents restaurants*/
 .box-prev {
   width: 95%;
-  height: 18rem;
+  height: 14rem;
   margin: 10px auto;
   background: #fff;
   overflow: hidden;
@@ -154,7 +153,7 @@ html body main {
 }
 .box-prev_figure {
   width: 100%;
-  height: 12rem;
+  height: 10rem;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
@@ -168,20 +167,15 @@ html body main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 2rem;
+  line-height: 1.5rem;
   padding: 2% 5%;
 }
 .box-prev_description h3 {
   display: flex;
   justify-content: space-between;
-}
-.box-prev_description h3 strong {
   font-size: 15px;
 }
-.box-prev_description h3 a {
-  border: 1px solid #000;
-}
-.box-prev_description h3 a:hover, .box-prev_description h3 a:active {
+.box-prev_description h3 i:hover, .box-prev_description h3 i:active {
   background: linear-gradient(45deg, #DA86DF, #9B77D4);
 }
 .box-prev_new-tag {
@@ -190,7 +184,7 @@ html body main {
   padding: 2% 4%;
   border-radius: 3px;
   background: #8ADDC6;
-  color: #064b37;
+  color: #237860;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   line-height: 1.2rem;
@@ -198,7 +192,7 @@ html body main {
   font-size: 15px;
   font-weight: 700;
   position: relative;
-  top: -16rem;
+  top: -13rem;
   left: 70%;
   z-index: 2;
 }
@@ -214,11 +208,11 @@ html body main {
   /* le bouton vert*/
 }
 .btn-c_container {
+  margin-top: 0.8rem;
   width: 100%;
 }
 .btn-c_container p {
   width: 100%;
-  margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -227,9 +221,18 @@ html body main {
   font-size: 15px;
 }
 .btn-c_container_heading {
-  line-height: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: 700;
+}
+.btn-c_container_definition {
+  margin-top: 0.5rem;
 }
 .btn-c_container_price {
+  margin-top: 0.5rem;
   flex-shrink: 7;
 }
 .btn-c_drop-over {
