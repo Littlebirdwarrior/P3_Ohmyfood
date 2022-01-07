@@ -2,30 +2,44 @@
 html {
   margin: 0;
   padding: 0;
-  background: #f6f3e3;
-    body {
-          main {
-            max-width: 350px;
-            height: 100vh;
-            padding: 20px 0;
-            margin: 0 auto;
-            background: #e1e9f8;
-          }
-    }
-
+  //background: #f6f3e3;
 }
+  main {
+    width: 85%;
+    margin: 0 auto;
+    //background: #e1e9f8;
+  }
 
 .container {
-  width: 100%;
-  margin: 20px 0;
-  padding: 20px 2%;
     &--darker{
     background-color:$color-light;
+      padding: 0.5rem 0;
+      margin: 20px 0;
+      width: 100%;
     }
     &--white {
       background: $color-white;
+      padding: 1.5rem;
+      margin: 20px 0;
     }
 }
+
+/* responsive*/
+
+@media screen and (min-width: 1142px) and (max-width: 1608px) {
+  .narrow-wrap {
+    max-width: 750px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 750px) and (max-width: 1622px) {
+  main {
+    width: 98%;
+  }
+}
+
+
 
 
 /*------------------------------------- le vrac*/
@@ -33,34 +47,39 @@ html {
 /*le CTA*/
 
 .button {
-  display: block;
-  width: fit-content;
-  height: 3rem;
+  width: $all-element-size;
   margin: 10px auto;
-  padding: 1rem 2rem;
-  font-size: $font-size-medium;
-  letter-spacing: 1px;
-  text-align: center;
-  border: none;
-  @include typo_white;
-  @include typo_bold;
-  @include radius_round;
-  background: linear-gradient(45deg, $color-secondary,$color-primary);
-      &:hover{
-        background: linear-gradient(45deg, $color-primary,$color-secondary);
-        -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
-        animation: bounce-top-fade 1.2s ease-in-out both;
-      }
+  > button{
+    display: block;
+    width: fit-content;
+    height: 3rem;
+    padding: 1rem 2rem;
+    font-size: $font-size-medium;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    @include typo_white;
+    @include typo_bold;
+    @include radius_round;
+    background: linear-gradient(45deg, $color-secondary,$color-primary);
+    &:hover{
+      background: linear-gradient(45deg, $color-primary,$color-secondary);
+      -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
+      animation: bounce-top-fade 1.2s ease-in-out both;
+    }
+  }
+
 }
 
 /* le bouton-a : gris-violet*/
 
 .btn-a {
+
   background-color: $color-light;
-  width: 95%;
+  width: $all-element-size;
   height: 5rem;
   @include radius_a_c;
-  margin: auto;
+  margin : 20px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -76,10 +95,10 @@ html {
     }
     &:hover {
       background: pastel($color-secondary);
-      -webkit-animation: fadein 2s ease-in; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: fadein 2s ease-in; /* Firefox < 16 */
-      -o-animation: fadein 2s ease-in; /* Opera < 12.1 */
-      animation: fadein 2s ease-in;
+      -webkit-animation: fadein 0.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 0.5s ease-in; /* Firefox < 16 */
+      -o-animation: fadein 0.5s ease-in; /* Opera < 12.1 */
+      animation: fadein 0.5s ease-in;
 
     }
 }
@@ -105,9 +124,9 @@ html {
 /* la box-prev : pour présenter les différents restaurants*/
 
 .box-prev {
-  width: 95%;
+  width: $all-element-size;
   height: 14rem;
-  margin: 10px auto;
+  margin: 20px auto;
   background: $color-white;
   overflow: hidden;
   @include radius_a_c;
@@ -166,9 +185,9 @@ html {
 
 .btn-c {
   background-color: $color-white;
-  width: 95%;
+  width: $all-element-size;
   height: 5rem;
-  margin: auto;
+  margin: 20px auto;
   padding-left: 1rem;
   overflow: hidden;
   @include radius_a_c;
@@ -217,7 +236,7 @@ html {
     text-overflow: ellipsis;
   }
   .btn-c_drop-over {
-    width: 30%;
+    width: 9rem;
     -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
     animation: scale-up-hor-right 0.5s ease-in-out;
 
@@ -447,14 +466,14 @@ html {
 @-webkit-keyframes fadein {
   0% { opacity: 0; }
   25%   { opacity: 1;
-  75% {opacity: 0.2}
+  75% {opacity: 0.8}
   100% {opacity: 1}
   }
 }
 @-moz-keyframes fadein {
   0% { opacity: 0; }
   25%   { opacity: 1;
-    75% {opacity: 0.2}
+    75% {opacity: 0.8}
     100% {opacity: 1}
   }
 }
@@ -467,13 +486,14 @@ html {
   }
 
   75% {
-    opacity: 0.2
+    opacity: 0.8
   }
 
   100% {
     opacity: 1
   }
 }
+
 
 
 

@@ -9,6 +9,11 @@ $color-light: #F7F7F7;
 $color-dark: #393939;
 $color-white: #fff;
 $color-black: #000;
+$all-element-size: 320px;
+
+@media screen and (min-width: 350px) {
+  $all-element-size: 100%;
+}
 
 /*--------------------------------MES MIXINS*/
 

@@ -40,35 +40,47 @@ p, i, h3 {
 html {
   margin: 0;
   padding: 0;
-  background: #f6f3e3;
-}
-html body main {
-  max-width: 350px;
-  height: 100vh;
-  padding: 20px 0;
-  margin: 0 auto;
-  background: #e1e9f8;
 }
 
-.container {
-  width: 100%;
-  margin: 20px 0;
-  padding: 20px 2%;
+main {
+  width: 85%;
+  margin: 0 auto;
 }
+
 .container--darker {
   background-color: #F7F7F7;
+  padding: 0.5rem 0;
+  margin: 20px 0;
+  width: 100%;
 }
 .container--white {
   background: #fff;
+  padding: 1.5rem;
+  margin: 20px 0;
 }
 
+/* responsive*/
+@media screen and (min-width: 1142px) and (max-width: 1608px) {
+  .narrow-wrap {
+    max-width: 750px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 750px) and (max-width: 1622px) {
+  main {
+    width: 98%;
+  }
+}
 /*------------------------------------- le vrac*/
 /*le CTA*/
 .button {
+  width: 320px;
+  margin: 10px auto;
+}
+.button > button {
   display: block;
   width: fit-content;
   height: 3rem;
-  margin: 10px auto;
   padding: 1rem 2rem;
   font-size: 20px;
   letter-spacing: 1px;
@@ -89,7 +101,7 @@ html body main {
   border-radius: 50px;
   background: linear-gradient(45deg, #DA86DF, #9B77D4);
 }
-.button:hover {
+.button > button:hover {
   background: linear-gradient(45deg, #9B77D4, #DA86DF);
   -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
   animation: bounce-top-fade 1.2s ease-in-out both;
@@ -98,10 +110,10 @@ html body main {
 /* le bouton-a : gris-violet*/
 .btn-a {
   background-color: #F7F7F7;
-  width: 95%;
+  width: 320px;
   height: 5rem;
   border-radius: 20px;
-  margin: auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -122,13 +134,13 @@ html body main {
 }
 .btn-a:hover {
   background: #fae9fb;
-  -webkit-animation: fadein 2s ease-in;
+  -webkit-animation: fadein 0.5s ease-in;
   /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s ease-in;
+  -moz-animation: fadein 0.5s ease-in;
   /* Firefox < 16 */
-  -o-animation: fadein 2s ease-in;
+  -o-animation: fadein 0.5s ease-in;
   /* Opera < 12.1 */
-  animation: fadein 2s ease-in;
+  animation: fadein 0.5s ease-in;
 }
 
 .list-number {
@@ -155,9 +167,9 @@ html body main {
 
 /* la box-prev : pour présenter les différents restaurants*/
 .box-prev {
-  width: 95%;
+  width: 320px;
   height: 14rem;
-  margin: 10px auto;
+  margin: 20px auto;
   background: #fff;
   overflow: hidden;
   border-radius: 20px;
@@ -214,9 +226,9 @@ html body main {
 /* le bouton-c : dropdown vert*/
 .btn-c {
   background-color: #fff;
-  width: 95%;
+  width: 320px;
   height: 5rem;
-  margin: auto;
+  margin: 20px auto;
   padding-left: 1rem;
   overflow: hidden;
   border-radius: 20px;
@@ -273,7 +285,7 @@ html body main {
   text-overflow: ellipsis;
 }
 .btn-c:hover .btn-c_drop-over {
-  width: 30%;
+  width: 9rem;
   -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
   animation: scale-up-hor-right 0.5s ease-in-out;
 }
@@ -490,7 +502,7 @@ html body main {
     opacity: 1;
   }
     75% {
-      opacity: 0.2;
+      opacity: 0.8;
     }
     100% {
       opacity: 1;
@@ -505,7 +517,7 @@ html body main {
     opacity: 1;
   }
     75% {
-      opacity: 0.2;
+      opacity: 0.8;
     }
     100% {
       opacity: 1;
@@ -520,7 +532,7 @@ html body main {
     opacity: 1;
   }
   75% {
-    opacity: 0.2;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -671,25 +683,32 @@ html body main {
   flex-basis: auto;
 }
 
+/*-------------------------------------les gap*/
+.gap-20px {
+  row-gap: 20px;
+}
+
 /*---------------------------------------- les responsives*/
-.resp-column {
-  flex-direction: column;
-}
+@media screen and (max-width: 780px) {
+  .resp-column {
+    flex-direction: column;
+  }
 
-.resp-row {
-  flex-direction: row;
-}
+  .resp-row {
+    flex-direction: row;
+  }
 
-.resp-row-reverse {
-  flex-direction: row-reverse;
-}
+  .resp-row-reverse {
+    flex-direction: row-reverse;
+  }
 
-.resp-nowrap {
-  flex-wrap: nowrap;
-}
+  .resp-nowrap {
+    flex-wrap: nowrap;
+  }
 
-.resp-wrap {
-  flex-wrap: wrap;
+  .resp-wrap {
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
