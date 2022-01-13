@@ -11,16 +11,15 @@ html {
   }
 
 .container {
+  margin: 20px 0;
+  padding: 1.5rem;
+  width: 100%;
     &--darker{
-    background-color:$color-light;
-      padding: 0.5rem 0;
-      margin: 20px 0;
-      width: 100%;
+      background-color:$color-light;
+
     }
     &--white {
       background: $color-white;
-      padding: 1.5rem;
-      margin: 20px 0;
     }
 }
 
@@ -148,20 +147,40 @@ html {
           flex-direction: column;
           line-height: 1.5rem;
           padding: 2% 5%;
+          position: relative;
             h3{
-              display: flex;
-              justify-content: space-between;
-              font-size: $font-size-courant;
-              strong{
-              }
-              svg{
-                  width: 20px;
-                  &:hover, &:active{
-                    path {
-                      @include gradient_1;
-                    }
+                font-size: $font-size-courant;
+                strong
+                {
+                  @include typo_bold;
                 }
               }
+            .heart  {
+              .far {
+                font-size: 20px;
+                position: absolute;
+                top: 15px;
+                left: 265px;
+                opacity: 1;
+                      &:hover, &:active {
+                        opacity: 0
+                      }
+              }
+                .fas {
+                  font-size: 20px;
+                  position: absolute;
+                  top: 15px;
+                  left: 265px;
+                  opacity: 0;
+                  z-index: 10;
+                          &:hover, &:active {
+                            opacity: 1;
+                            color: $color-primary;
+                          }
+                    }
+
+
+
             }
       }
       &_new-tag {

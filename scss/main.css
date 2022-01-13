@@ -47,16 +47,16 @@ main {
   margin: 0 auto;
 }
 
+.container {
+  margin: 20px 0;
+  padding: 1.5rem;
+  width: 100%;
+}
 .container--darker {
   background-color: #F7F7F7;
-  padding: 0.5rem 0;
-  margin: 20px 0;
-  width: 100%;
 }
 .container--white {
   background: #fff;
-  padding: 1.5rem;
-  margin: 20px 0;
 }
 
 /* responsive*/
@@ -192,17 +192,40 @@ main {
   flex-direction: column;
   line-height: 1.5rem;
   padding: 2% 5%;
+  position: relative;
 }
 .box-prev_description h3 {
-  display: flex;
-  justify-content: space-between;
   font-size: 15px;
 }
-.box-prev_description h3 svg {
-  width: 20px;
+.box-prev_description h3 strong {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.2rem;
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: 700;
 }
-.box-prev_description h3 svg:hover path, .box-prev_description h3 svg:active path {
-  background: linear-gradient(45deg, #DA86DF, #9B77D4);
+.box-prev_description .heart .far {
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 265px;
+  opacity: 1;
+}
+.box-prev_description .heart .far:hover, .box-prev_description .heart .far:active {
+  opacity: 0;
+}
+.box-prev_description .heart .fas {
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 265px;
+  opacity: 0;
+  z-index: 10;
+}
+.box-prev_description .heart .fas:hover, .box-prev_description .heart .fas:active {
+  opacity: 1;
+  color: #9B77D4;
 }
 .box-prev_new-tag {
   width: fit-content;
@@ -500,7 +523,6 @@ main {
   }
   25% {
     opacity: 1;
-  }
     75% {
       opacity: 0.8;
     }
@@ -508,14 +530,13 @@ main {
       opacity: 1;
     }
   }
-
+}
 @-moz-keyframes fadein {
   0% {
     opacity: 0;
   }
   25% {
     opacity: 1;
-  }
     75% {
       opacity: 0.8;
     }
@@ -523,7 +544,7 @@ main {
       opacity: 1;
     }
   }
-
+}
 @keyframes fadein {
   0% {
     opacity: 0;

@@ -43,6 +43,10 @@ $all-element-size: 320px;
  background: linear-gradient(45deg, $color-secondary,$color-primary);
 }
 
+@mixin gradient_2{
+  background: radial-gradient( $color-secondary,$color-primary);
+}
+
 /*mes font-size*/
 $font-size: 13px 15px 20px 24px;
 
