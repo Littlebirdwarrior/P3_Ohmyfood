@@ -43,39 +43,52 @@ html {
 }
 
 main {
-  width: 85%;
+  width: 100%;
+}
+
+.background {
+  width: 100%;
   margin: 0 auto;
+}
+.background--darker {
+  background-color: #F7F7F7;
+}
+.background--white {
+  background: #fff;
+}
+.background--black {
+  background: #393939;
+  color: #fff;
 }
 
 .container {
-  margin: 20px 0;
-  padding: 1.5rem;
-  width: 100%;
-}
-.container--darker {
-  background-color: #F7F7F7;
-}
-.container--white {
-  background: #fff;
+  margin: 20px auto;
+  padding: 1.5rem 0;
+  width: 65%;
 }
 
 /* responsive*/
-@media screen and (min-width: 1142px) and (max-width: 1608px) {
-  .narrow-wrap {
-    max-width: 750px;
-    margin: auto;
+@media screen and (max-width: 1247px) {
+  .mobile-disable {
+    display: none;
   }
 }
 @media screen and (max-width: 750px) and (max-width: 1622px) {
-  main {
-    width: 98%;
+  .container {
+    width: 99%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .container {
+    max-width: 1090px;
   }
 }
 /*------------------------------------- le vrac*/
 /*le CTA*/
 .button {
-  width: 320px;
+  width: 280px;
   margin: 10px auto;
+  white-space: nowrap;
 }
 .button > button {
   display: block;
@@ -110,7 +123,7 @@ main {
 /* le bouton-a : gris-violet*/
 .btn-a {
   background-color: #F7F7F7;
-  width: 320px;
+  width: 280px;
   height: 5rem;
   border-radius: 20px;
   margin: 20px auto;
@@ -144,7 +157,7 @@ main {
 }
 
 .list-number {
-  width: 2rem;
+  width: 1.9rem;
   height: fit-content;
   padding: 2%;
   border-radius: 50px;
@@ -161,13 +174,13 @@ main {
   justify-content: center;
   align-content: baseline;
   align-self: center;
-  margin-left: -3rem;
+  margin-left: -2rem;
   z-index: 99;
 }
 
 /* la box-prev : pour présenter les différents restaurants*/
 .box-prev {
-  width: 320px;
+  width: 280px;
   height: 14rem;
   margin: 20px auto;
   background: #fff;
@@ -208,8 +221,8 @@ main {
 .box-prev_description .heart .far {
   font-size: 20px;
   position: absolute;
-  top: 15px;
-  left: 265px;
+  top: 14px;
+  left: 230px;
   opacity: 1;
 }
 .box-prev_description .heart .far:hover, .box-prev_description .heart .far:active {
@@ -218,8 +231,8 @@ main {
 .box-prev_description .heart .fas {
   font-size: 20px;
   position: absolute;
-  top: 15px;
-  left: 265px;
+  top: 14px;
+  left: 230px;
   opacity: 0;
   z-index: 10;
 }
@@ -242,14 +255,38 @@ main {
   font-weight: 700;
   position: relative;
   top: -13rem;
-  left: 70%;
+  left: 65%;
   z-index: 2;
+}
+
+.mobile-disable {
+  filter: grayscale(50%);
+  background: linear-gradient(0.25turn, #f2f2f2, #fcfcfc, #eaeaea, #d8d8d8);
+  border: 1px solid #eaeaea;
+}
+.mobile-disable .box-prev_figure {
+  opacity: 0.5;
+}
+.mobile-disable .box-prev_description {
+  color: #919191;
+}
+.mobile-disable .box-prev_description .heart:hover .far {
+  opacity: 1;
+}
+.mobile-disable .box-prev_description .heart:hover .fas {
+  display: none;
+}
+.mobile-disable .box-prev_new-tag {
+  filter: grayscale(1);
+}
+.mobile-disable .box-prev_new-tag p {
+  opacity: 0.8;
 }
 
 /* le bouton-c : dropdown vert*/
 .btn-c {
   background-color: #fff;
-  width: 320px;
+  width: 280px;
   height: 5rem;
   margin: 20px auto;
   padding-left: 1rem;
@@ -301,14 +338,18 @@ main {
 }
 
 /*L'animation*/
+.btn-c:hover .btn-c_container {
+  width: 80%;
+}
 .btn-c:hover .btn-c_container_definition {
+  width: 95%;
   padding: 0 1rem 0 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .btn-c:hover .btn-c_drop-over {
-  width: 9rem;
+  width: 5rem;
   -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
   animation: scale-up-hor-right 0.5s ease-in-out;
 }
@@ -360,8 +401,8 @@ main {
 }
 @-webkit-keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(5rem);
-    transform: translateX(5rem);
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem);
     opacity: 1;
   }
   100% {
@@ -522,7 +563,7 @@ main {
     opacity: 0;
   }
   25% {
-    opacity: 1;
+    opacity: 1; }
     75% {
       opacity: 0.8;
     }
@@ -530,13 +571,13 @@ main {
       opacity: 1;
     }
   }
-}
+
 @-moz-keyframes fadein {
   0% {
     opacity: 0;
   }
   25% {
-    opacity: 1;
+    opacity: 1; }
     75% {
       opacity: 0.8;
     }
@@ -544,7 +585,7 @@ main {
       opacity: 1;
     }
   }
-}
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -559,6 +600,44 @@ main {
     opacity: 1;
   }
 }
+/* le footer*/
+footer div {
+  padding: 0.5rem 0 0.2rem;
+}
+footer div nav div {
+  display: flex;
+}
+footer div nav div h4 {
+  font-size: 1.8rem;
+  font-family: "Shrikhand", sans-serif;
+  letter-spacing: 0.1rem;
+  margin: 0 auto;
+}
+footer div {
+  margin: 0 auto;
+}
+footer div nav {
+  margin: 0 auto;
+}
+footer div nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+footer div nav ul li {
+  list-style: none;
+  margin: 0 auto 2rem;
+}
+footer div nav ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+footer div nav ul li a:hover {
+  color: #DA86DF;
+}
+
 /*---------------------------------------- les flexboxes*/
 .flex {
   display: flex;

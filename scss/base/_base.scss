@@ -5,39 +5,52 @@ html {
   //background: #f6f3e3;
 }
   main {
-    width: 85%;
-    margin: 0 auto;
-    //background: #e1e9f8;
+    width: 100%;
   }
 
-.container {
-  margin: 20px 0;
-  padding: 1.5rem;
+.background {
   width: 100%;
-    &--darker{
-      background-color:$color-light;
+  margin: 0 auto;
+  &--darker{
+    background-color:$color-light;
 
-    }
-    &--white {
-      background: $color-white;
-    }
+  }
+  &--white {
+    background: $color-white;
+  }
+
+  &--black {
+    background: $color-dark;
+    color: $color-white;
+  }
 }
+
+.container {
+  margin: 20px auto;
+  padding: 1.5rem 0;
+  width: 65%;
+}
+
 
 /* responsive*/
 
-@media screen and (min-width: 1142px) and (max-width: 1608px) {
-  .narrow-wrap {
-    max-width: 750px;
-    margin: auto;
+@media screen and (max-width: 1247px) {
+  .mobile-disable {
+    display: none;
   }
 }
 
 @media screen and (max-width: 750px) and (max-width: 1622px) {
-  main {
-    width: 98%;
+  .container {
+    width: 99%;
   }
 }
 
+@media screen and (min-width: 1700px) {
+  .container {
+    max-width: 1090px;
+  }
+}
 
 
 
@@ -48,6 +61,7 @@ html {
 .button {
   width: $all-element-size;
   margin: 10px auto;
+  white-space: nowrap;
   > button{
     display: block;
     width: fit-content;
@@ -103,7 +117,7 @@ html {
 }
 
 .list-number {
-  width: 2rem;
+  width: 1.9rem;
   height: fit-content;
   padding: 2%;
   @include radius_round;
@@ -115,7 +129,7 @@ html {
   justify-content: center;
   align-content: baseline;
   align-self: center;
-  margin-left: -3rem;
+  margin-left: -2rem;
   z-index: 99;
 }
 
@@ -159,8 +173,8 @@ html {
               .far {
                 font-size: 20px;
                 position: absolute;
-                top: 15px;
-                left: 265px;
+                top: 14px;
+                left: 230px;
                 opacity: 1;
                       &:hover, &:active {
                         opacity: 0
@@ -169,8 +183,8 @@ html {
                 .fas {
                   font-size: 20px;
                   position: absolute;
-                  top: 15px;
-                  left: 265px;
+                  top: 14px;
+                  left: 230px;
                   opacity: 0;
                   z-index: 10;
                           &:hover, &:active {
@@ -193,11 +207,37 @@ html {
         @include typo_bold;
         position: relative;
         top: -13rem;
-        left:70%;
+        left:65%;
         z-index:2;
       }
 }
 
+
+.mobile-disable {
+  filter: grayscale(50%);
+  background: linear-gradient( 0.25turn, darken($color-light, 2%),lighten($color-light, 2%), darken($color-light, 5%), darken($color-light, 12%));
+  border: 1px solid darken($color-light, 5%);
+  .box-prev_figure {
+    opacity: 0.5;
+  }
+  .box-prev_description {
+    color: darken($color-light, 40%);
+      .heart:hover {
+        .far {
+          opacity: 1;
+        }
+        .fas {
+          display: none;
+      }
+    }
+  }
+  .box-prev_new-tag {
+    filter: grayscale(1);
+     p {
+       opacity: 0.8;
+     }
+  }
+}
 
 
 /* le bouton-c : dropdown vert*/
@@ -248,14 +288,18 @@ html {
 
 /*L'animation*/
 .btn-c:hover {
+    .btn-c_container {
+      width: 80%;
+    }
   .btn-c_container_definition{
+    width: 95%;
     padding: 0 1rem 0 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .btn-c_drop-over {
-    width: 9rem;
+    width: 5rem;
     -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
     animation: scale-up-hor-right 0.5s ease-in-out;
 
@@ -267,8 +311,6 @@ html {
       -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
       animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     }
-
-
   }
 }
 
@@ -313,8 +355,8 @@ html {
 
 @-webkit-keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(5rem);
-    transform: translateX(5rem);
+    -webkit-transform: translateX(3rem);
+    transform: translateX(3rem);
     opacity: 1;
   }
   100% {
@@ -514,7 +556,49 @@ html {
 }
 
 
+/* le footer*/
 
+footer {
+  div {
+    padding: 0.5rem 0 0.2rem;
+    nav {
+      div {
+        display: flex;
+        h4 {
+          font-size: 1.8rem;
+          font-family: "Shrikhand" , sans-serif;
+          letter-spacing: 0.1rem;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  div {
+    margin: 0 auto;
+    nav {
+      margin: 0 auto;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        margin-bottom: 0;
+        li {
+          list-style: none;
+          margin: 0 auto 2rem;
+          a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
 
 
 
