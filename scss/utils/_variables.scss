@@ -71,4 +71,17 @@ $border-radius-btn:  0 15px 20px 50px;
   border-radius: nth($border-radius-btn, 4);
 }
 
+/*mes ombres*/
+
+@mixin shadow_1 {
+  box-shadow: 2px 3px 20px lighten($color-dark, 70%);
+}
+
+@mixin shadow_2 {
+  box-shadow: 2px 3px 20px lighten($color-dark, 65%);
+}
+
+@mixin text_shadow_hell {
+  text-shadow: $color-light 1px 0 10px;
+}
 
