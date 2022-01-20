@@ -73,14 +73,19 @@ main {
 }
 
 /* responsive*/
+@media screen and (max-width: 750px) {
+  .container {
+    width: 99%;
+  }
+}
 @media screen and (max-width: 1247px) {
   .mobile-disable {
     display: none;
   }
 }
-@media screen and (max-width: 750px) and (max-width: 1622px) {
-  .container {
-    width: 99%;
+@media screen and (min-width: 1293px) {
+  .container > div {
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1700px) {
@@ -258,26 +263,14 @@ main {
   font-weight: 700;
 }
 .box-prev_description .heart .far {
-  font-size: 20px;
   position: absolute;
   top: 14px;
   left: 230px;
-  opacity: 1;
-}
-.box-prev_description .heart .far:hover, .box-prev_description .heart .far:active {
-  opacity: 0;
 }
 .box-prev_description .heart .fas {
-  font-size: 20px;
   position: absolute;
   top: 14px;
   left: 230px;
-  opacity: 0;
-  z-index: 10;
-}
-.box-prev_description .heart .fas:hover, .box-prev_description .heart .fas:active {
-  opacity: 1;
-  color: #9B77D4;
 }
 .box-prev_new-tag {
   width: fit-content;
@@ -296,6 +289,24 @@ main {
   top: -13rem;
   left: 65%;
   z-index: 2;
+}
+
+/* la class heart est à part car je vais la réutiliser après*/
+.heart .far {
+  font-size: 20px;
+  opacity: 1;
+}
+.heart .far:hover, .heart .far:active {
+  opacity: 0;
+}
+.heart .fas {
+  font-size: 20px;
+  opacity: 0;
+  z-index: 10;
+}
+.heart .fas:hover, .heart .fas:active {
+  opacity: 1;
+  color: #9B77D4;
 }
 
 .mobile-disable {
@@ -604,29 +615,29 @@ main {
     opacity: 0;
   }
   25% {
-    opacity: 1;}
-    75% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
+    opacity: 1;
   }
-
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-moz-keyframes fadein {
   0% {
     opacity: 0;
   }
   25% {
-    opacity: 1;}
-    75% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
+    opacity: 1;
   }
-
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -644,14 +655,75 @@ main {
 /*------les pages client*/
 .img-client_container {
   width: 100%;
-  height: 200px;
-  background: url("../../img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  height: 300px;
+  margin-bottom: -100px;
+  background: url("https://placekitten.com/1900/400") no-repeat top center;
 }
 
 .container-radius {
-  border-radius: 50px 50px 0 0;
+  border-radius: 40px 40px 0 0;
 }
 
+.padding-bottom-2 {
+  padding: 0 0 2rem;
+}
+
+.padding-top-2 {
+  padding: 2rem 0 0;
+}
+
+.titre-menu {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+.titre-menu::after {
+  display: block;
+  content: "";
+  width: 38px;
+  height: 4px;
+  margin-top: 6px;
+  background: #8ADDC6;
+}
+
+.nom-du-restau {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 20%;
+}
+.nom-du-restau > h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 24px;
+}
+.nom-du-restau > .heart {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+}
+.nom-du-restau > .heart > .far {
+  position: absolute;
+  top: 23px;
+  left: 0;
+}
+.nom-du-restau > .heart > .fas {
+  position: absolute;
+  top: 23px;
+  left: 0;
+}
+
+@media screen and (min-width: 300px) and (max-width: 857px) {
+  .w-300 {
+    width: 280px;
+    margin: auto;
+  }
+
+  .heart {
+    padding-right: 10px;
+  }
+}
 /*---------------------------------------- les flexboxes*/
 .flex {
   display: flex;

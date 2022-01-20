@@ -36,16 +36,26 @@ html {
 
 /* responsive*/
 
+@media screen and (max-width: 750px) {
+  .container {
+    width: 99%;
+  }
+}
+
 @media screen and (max-width: 1247px) {
   .mobile-disable {
     display: none;
   }
 }
 
-@media screen and (max-width: 750px) and (max-width: 1622px) {
+@media screen and (min-width: 1293px){
+
   .container {
-    width: 99%;
+    > div {
+      margin: 0 auto;
+    }
   }
+
 }
 
 @media screen and (min-width: 1700px) {
@@ -208,29 +218,15 @@ html {
               }
             .heart  {
               .far {
-                font-size: 20px;
                 position: absolute;
                 top: 14px;
                 left: 230px;
-                opacity: 1;
-                      &:hover, &:active {
-                        opacity: 0
                       }
-              }
                 .fas {
-                  font-size: 20px;
                   position: absolute;
                   top: 14px;
                   left: 230px;
-                  opacity: 0;
-                  z-index: 10;
-                          &:hover, &:active {
-                            opacity: 1;
-                            color: $color-primary;
-                          }
                     }
-
-
 
             }
       }
@@ -247,6 +243,31 @@ html {
         left:65%;
         z-index:2;
       }
+}
+
+/* la class heart est à part car je vais la réutiliser après*/
+
+.heart {
+  .far {
+    font-size: 20px;
+
+    opacity: 1;
+    &:hover, &:active {
+      opacity: 0
+    }
+  }
+  .fas {
+    font-size: 20px;
+    opacity: 0;
+    z-index: 10;
+    &:hover, &:active {
+      opacity: 1;
+      color: $color-primary;
+    }
+  }
+
+
+
 }
 
 
@@ -565,17 +586,17 @@ html {
 
 @-webkit-keyframes fadein {
   0% { opacity: 0; }
-  25%   { opacity: 1;
+  25%   { opacity: 1;}
   75% {opacity: 0.8}
   100% {opacity: 1}
-  }
+
 }
 @-moz-keyframes fadein {
   0% { opacity: 0; }
-  25%   { opacity: 1;
+  25%   { opacity: 1;}
     75% {opacity: 0.8}
     100% {opacity: 1}
-  }
+
 }
 @keyframes fadein {
   0% {
@@ -600,12 +621,76 @@ html {
 
 .img-client_container {
   width: 100%;
-  height: 200px;
-  background: url('../../img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+  height: 300px;
+  margin-bottom: -100px;
+  background: url('https://placekitten.com/1900/400') no-repeat top center;
 }
 
 .container-radius {
-  border-radius: 50px 50px 0 0;
+  border-radius: 40px 40px 0 0;
+}
+
+.padding-bottom-2 {
+  padding: 0 0 2rem;
+}
+
+.padding-top-2 {
+  padding: 2rem 0 0;
+}
+
+.titre-menu {
+  font-size: $font-size-courant;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+.titre-menu::after {
+  display: block;
+  content: "";
+  width: 38px;
+  height: 4px;
+  margin-top: 6px ;
+  background: $color-accent-light;
+
+}
+
+.nom-du-restau {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 20%;
+  >h1 {
+    font-family: "Shrikhand", sans-serif;
+    font-size: $font-size-big;
+  }
+  >.heart {
+    position: relative;
+    width: fit-content;
+    margin: 0;
+        >.far {
+          position: absolute;
+          top: 23px;
+          left: 0;
+        }
+    >.fas {
+      position: absolute;
+      top: 23px;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 857px) {
+  .w-300 {
+    width: 280px;
+    margin: auto;
+  }
+
+  .heart {
+    padding-right: 10px;
+  }
+
 }
 
 
