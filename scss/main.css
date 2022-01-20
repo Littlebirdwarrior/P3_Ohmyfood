@@ -42,9 +42,10 @@ p, i, h3 {
 html {
   margin: 0;
   padding: 0;
+  min-width: 370px;
 }
 
-main {
+header, main, footer {
   width: 100%;
 }
 
@@ -70,6 +71,7 @@ main {
   margin: 0 auto;
   padding: 1rem 0;
   width: 65%;
+  max-width: 1560px;
 }
 
 /* responsive*/
@@ -81,11 +83,6 @@ main {
 @media screen and (max-width: 1247px) {
   .mobile-disable {
     display: none;
-  }
-}
-@media screen and (min-width: 1293px) {
-  .container > div {
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1700px) {
@@ -414,6 +411,78 @@ main {
   animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/*------les pages client*/
+.img-client_container {
+  width: 100%;
+  height: 300px;
+  margin-bottom: -100px;
+  background: url("https://placekitten.com/1900/400") no-repeat top center;
+}
+
+.container-radius {
+  border-radius: 40px 40px 0 0;
+}
+
+.padding-bottom-2 {
+  padding-bottom: 2rem;
+}
+
+.padding-top-2 {
+  padding-top: 2rem;
+}
+
+.titre-menu {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+.titre-menu::after {
+  display: block;
+  content: "";
+  width: 38px;
+  height: 4px;
+  margin-top: 6px;
+  background: #8ADDC6;
+}
+
+.nom-du-restau {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 20%;
+}
+.nom-du-restau > h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 24px;
+}
+.nom-du-restau > .heart {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+}
+.nom-du-restau > .heart > .far {
+  position: absolute;
+  top: 23px;
+  left: 0;
+}
+.nom-du-restau > .heart > .fas {
+  position: absolute;
+  top: 23px;
+  left: 0;
+}
+
+@media screen and (min-width: 300px) and (max-width: 857px) {
+  .w-300 {
+    width: 280px;
+    margin: auto;
+  }
+
+  .heart {
+    padding-right: 10px;
+  }
+}
 /* les animations*/
 @-webkit-keyframes rotate-in-center {
   0% {
@@ -610,6 +679,18 @@ main {
     opacity: 1;
   }
 }
+.fadein {
+  /* l'animation*/
+  -webkit-animation: fadein 2s ease-in;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s ease-in;
+  /* Firefox < 16 */
+  -o-animation: fadein 2s ease-in;
+  /* Opera < 12.1 */
+  animation: fadein 2s ease-in;
+  animation-delay: 1s;
+}
+
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -650,78 +731,6 @@ main {
   }
   100% {
     opacity: 1;
-  }
-}
-/*------les pages client*/
-.img-client_container {
-  width: 100%;
-  height: 300px;
-  margin-bottom: -100px;
-  background: url("https://placekitten.com/1900/400") no-repeat top center;
-}
-
-.container-radius {
-  border-radius: 40px 40px 0 0;
-}
-
-.padding-bottom-2 {
-  padding: 0 0 2rem;
-}
-
-.padding-top-2 {
-  padding: 2rem 0 0;
-}
-
-.titre-menu {
-  font-size: 15px;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-left: 0.5rem;
-}
-
-.titre-menu::after {
-  display: block;
-  content: "";
-  width: 38px;
-  height: 4px;
-  margin-top: 6px;
-  background: #8ADDC6;
-}
-
-.nom-du-restau {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  margin: 0 20%;
-}
-.nom-du-restau > h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 24px;
-}
-.nom-du-restau > .heart {
-  position: relative;
-  width: fit-content;
-  margin: 0;
-}
-.nom-du-restau > .heart > .far {
-  position: absolute;
-  top: 23px;
-  left: 0;
-}
-.nom-du-restau > .heart > .fas {
-  position: absolute;
-  top: 23px;
-  left: 0;
-}
-
-@media screen and (min-width: 300px) and (max-width: 857px) {
-  .w-300 {
-    width: 280px;
-    margin: auto;
-  }
-
-  .heart {
-    padding-right: 10px;
   }
 }
 /*---------------------------------------- les flexboxes*/
@@ -929,6 +938,25 @@ footer div nav ul li a {
 }
 footer div nav ul li a:hover {
   color: #DA86DF;
+}
+
+/* le header*/
+header {
+  width: 100%;
+  padding: 1rem 20%;
+}
+header > img {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+header > a > i {
+  margin-top: 5px;
+  font-size: 24px;
+  color: #000;
+}
+header > a > i:hover, header > a > i:active {
+  color: #9B77D4;
 }
 
 /*# sourceMappingURL=main.css.map */

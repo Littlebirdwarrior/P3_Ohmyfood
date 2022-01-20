@@ -1,0 +1,22 @@
+
+/* le header*/
+
+header {
+  width: 100%;
+  padding: 1rem 20%;
+   >img {
+     width: 200px;
+     height: auto;
+     margin: 0 auto;
+   }
+  >a {
+     >i {
+       margin-top: 5px;
+       font-size: $font-size-big;
+       color: $color-black;
+       &:hover , &:active {
+         color: $color-primary;
+       }
+     }
+  }
+}
