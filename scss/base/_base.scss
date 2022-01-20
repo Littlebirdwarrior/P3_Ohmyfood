@@ -177,8 +177,7 @@ html {
   justify-content: center;
   align-content: baseline;
   align-self: center;
-  margin-left: -2rem;
-  z-index: 99;
+  margin-left: -3rem;
 }
 
 
@@ -312,6 +311,8 @@ html {
   overflow: hidden;
   @include radius_a_c;
   @include shadow_1;
+  @include slide-top;
+  cursor: pointer;
    &_container {
      margin-top: 1.2rem;
      width: 100%;

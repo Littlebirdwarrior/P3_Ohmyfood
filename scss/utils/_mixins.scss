@@ -67,3 +67,30 @@ $border-radius-btn:  0 15px 20px 50px;
 @mixin text_shadow_hell {
   text-shadow: $color-light 1px 0 10px;
 }
+
+@mixin slide-top {
+  .slide-top {
+    opacity: 0;
+    -webkit-animation: slide-top 1.75s linear forwards 0.25s;
+    animation: slide-top 1.75s linear forwards 0.25s;
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(7px);
+      transform: translateY(7px);
+      opacity: 0;
+    }
+    50% {
+      -webkit-transform: translateY(2.5px);
+      transform: translateY(2.5px);
+      opacity: 0.5;
+    }
+    100% {
+      -webkit-transform: translateY(-2.5px);
+      transform: translateY(-2.5px);
+      opacity: 1;
+    }
+  }
+
+
+}
