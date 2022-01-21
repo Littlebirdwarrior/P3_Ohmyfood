@@ -4,25 +4,27 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  cursor: none;
   background: #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: center;
+    .loader {
+      -webkit-animation: puff-in-center 3s linear;
+      animation: puff-in-center 3s linear;
+      > svg {
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        height: auto;
+
+      }
+  }
 }
 
-.loader > svg {
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: auto;
 
-}
 
-.loader {
-  -webkit-animation: puff-in-center 3s linear;
-  animation: puff-in-center 3s linear;
-}
+
 
 @-webkit-keyframes puff-in-center {
   0% {

@@ -42,7 +42,7 @@ p, i, h3 {
 html {
   margin: 0;
   padding: 0;
-  min-width: 370px;
+  min-width: 300px;
 }
 
 header, main, footer {
@@ -119,7 +119,7 @@ header, main, footer {
 }
 @media screen and (min-width: 720px) {
   .desktop-bg {
-    background: url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
   }
 }
 /*le CTA*/
@@ -194,12 +194,16 @@ header, main, footer {
   -o-animation: fadein 0.5s ease-in;
   /* Opera < 12.1 */
   animation: fadein 0.5s ease-in;
+  animation-delay: 0.2s;
+}
+.btn-a:hover .btn-a_icone {
+  color: #7f50c8;
 }
 
 .list-number {
-  width: 1.9rem;
-  height: fit-content;
-  padding: 2%;
+  width: 31px;
+  height: 30px;
+  padding: 6px 5px;
   border-radius: 50px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -285,6 +289,16 @@ header, main, footer {
   top: -13rem;
   left: 65%;
   z-index: 2;
+}
+.box-prev:hover {
+  -webkit-animation: fadein 0.5s ease-in;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s ease-in;
+  /* Firefox < 16 */
+  -o-animation: fadein 0.5s ease-in;
+  /* Opera < 12.1 */
+  animation: fadein 0.5s ease-in;
+  animation-delay: 0.2s;
 }
 
 /* la class heart est à part car je vais la réutiliser après*/
@@ -438,7 +452,7 @@ header, main, footer {
   width: 100%;
   height: 300px;
   margin-bottom: -100px;
-  background: url("https://placekitten.com/1900/400") no-repeat top center;
+  background: url("/img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat top center;
 }
 
 .container-radius {
@@ -935,7 +949,7 @@ footer div nav div h4 {
   font-size: 20px;
   font-family: "Shrikhand", sans-serif;
   letter-spacing: 1px;
-  margin: 0 auto;
+  margin: 5px auto 0;
 }
 footer div {
   margin: 0 auto;
@@ -952,7 +966,7 @@ footer div nav ul {
 }
 footer div nav ul li {
   list-style: none;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 footer div nav ul li a {
   color: inherit;
@@ -987,23 +1001,21 @@ header > a > i:hover, header > a > i:active {
   left: 0;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  cursor: none;
   background: #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.loader > svg {
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: auto;
-}
-
-.loader {
+.loader-page .loader {
   -webkit-animation: puff-in-center 3s linear;
   animation: puff-in-center 3s linear;
+}
+.loader-page .loader > svg {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: auto;
 }
 
 @-webkit-keyframes puff-in-center {
