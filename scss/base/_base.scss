@@ -1,7 +1,7 @@
 html {
   margin: 0;
   padding: 0;
-  min-width: 300px;
+  min-width: 320px;
 }
   header, main, footer {
     width: 100%;
@@ -40,6 +40,17 @@ html {
 @media screen and (max-width: 750px) {
   .container {
     width: 99%;
+  }
+
+  .nom-du-restau {
+    margin: 0 20%;
+  }
+
+}
+
+@media screen and (min-width: 820px) and (max-width: 1380px) {
+  .container {
+    width: 720px;
   }
 }
 
@@ -167,9 +178,9 @@ html {
 }
 
 .list-number {
-  width: 31px;
+  width: 30px;
   height: 30px;
-  padding: 6px 5px;
+  padding: 6px;
   @include radius_round;
   @include typo_white;
   font-size: $font-size-small;
@@ -179,17 +190,19 @@ html {
   justify-content: center;
   align-content: baseline;
   align-self: center;
-  margin-left: -3rem;
+  margin-left: -45px;
 }
 
 
 /* la box-prev : pour présenter les différents restaurants*/
 
+
 .box-prev {
+  display: block;
   width: $all-element-size;
   height: 14rem;
-  margin: 20px auto;
   background: $color-white;
+  margin: 20px auto;
   overflow: hidden;
   @include radius_a_c;
   @include shadow_1;
@@ -272,7 +285,9 @@ html {
     z-index: 10;
     &:hover, &:active {
       opacity: 1;
-      color: $color-primary;
+      @include gradient_2;
+      -webkit-background-clip: text;
+      color: transparent;
     }
   }
 
@@ -285,6 +300,8 @@ html {
   filter: grayscale(50%);
   background: linear-gradient( 0.25turn, darken($color-light, 2%),lighten($color-light, 2%), darken($color-light, 5%), darken($color-light, 8%));
   border: 1px solid darken($color-light, 4%);
+  animation: none;
+  -webkit-animation: none;
   .box-prev_figure {
     opacity: 0.5;
   }
@@ -320,7 +337,6 @@ html {
   overflow: hidden;
   @include radius_a_c;
   @include shadow_1;
-  @include slide-top;
   cursor: pointer;
    &_container {
      margin-top: 1.2rem;
@@ -378,7 +394,7 @@ html {
     i {
       opacity: 1;
       position: relative;
-      top: 37%;
+      top: 39%;
       left: 37%;
       -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
       animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
@@ -390,9 +406,40 @@ html {
 
 .img-client_container {
   width: 100%;
-  height: 300px;
+  height: 251px;
   margin-bottom: -100px;
-  background: url("/img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat top center;
+
+}
+
+@media screen and (min-width: 720px) {
+
+  .img-client_container {
+    width: 100%;
+    height: 477px;
+    margin-bottom: -200px;
+  }
+}
+
+.bg {
+  &-alafrançaise {
+    background: url("/img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-size: cover;
+  }
+
+  &-lanoteenchantee {
+    background: url("/img/img-client/grande/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-size: cover;
+  }
+
+  &-lapalettedugout {
+    background: url("/img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+  }
+
+  &-ledelicedessens {
+    background: url("/img/img-client/grande/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-size: cover;
+  }
 }
 
 .container-radius {
@@ -427,8 +474,7 @@ html {
 .nom-du-restau {
   display: flex;
   justify-content: space-between;
-  width: 200px;
-  margin: 0 20%;
+  width: 300px;
   >h1 {
     font-family: "Shrikhand", sans-serif;
     font-size: $font-size-big;
@@ -709,6 +755,45 @@ html {
 
   100% {
     opacity: 1
+  }
+}
+
+.slide-top {
+  opacity: 0;
+  -webkit-animation: slide-top 1.75s ease-in-out forwards 0.25s;
+  animation: slide-top 1.75s ease-in-out forwards 0.25s;
+  &_1 {
+    animation-delay: .1s;
+  }
+
+  &_2 {
+    animation-delay: .4s;
+  }
+
+  &_3 {
+    animation-delay: .6s;
+  }
+
+  &_4 {
+    animation-delay: .8s;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(7px);
+    transform: translateY(7px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(2.5px);
+    transform: translateY(2.5px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(-2.5px);
+    transform: translateY(-2.5px);
+    opacity: 1;
   }
 }
 

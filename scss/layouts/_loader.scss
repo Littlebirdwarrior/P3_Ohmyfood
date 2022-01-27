@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
     .loader {
       -webkit-animation: puff-in-center 3s linear;
       animation: puff-in-center 3s linear;
@@ -21,10 +22,6 @@
       }
   }
 }
-
-
-
-
 
 @-webkit-keyframes puff-in-center {
   0% {

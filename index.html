@@ -8,10 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--Fontawsome--->
-    <link rel="stylesheet" href="scss/vendors/fontawsome-all.css" type="text/css">
+<!--    <link rel="stylesheet" href="./scss/vendors/fontawsome-all.css" type="text/css">-->
+    <script src="https://kit.fontawesome.com/cab8a775d7.js" crossorigin="anonymous"></script>
+
 
     <!--la feuille de style-->
-    <link rel="stylesheet"  type="text/css" href="/scss/main.css">
+    <link rel="stylesheet"  type="text/css" href="./scss/main.css">
     <!--pour le référencement-->
     <title>Projet 3 - Ohmyfood -Openclassroom</title>
 </head>
@@ -68,7 +70,7 @@
 
             <div class="container">
                 <div class="button flex justify-center">
-                    <button> Explorer nos restaurants</button>
+                    <button onclick="window.location.href = '#';"> Explorer nos restaurants</button>
                 </div>
 
             </div>
@@ -80,27 +82,29 @@
     <!--le bouton-a gris-violet-->
     <div class="background--white padding-top-2 padding-bottom-2">
         <div class="container flex wrap resp-column">
-            <div class="btn-a flex ">
+            <a class="btn-a flex " href="#">
                 <p class="list-number">1</p>
                 <i class="btn-a_icone fas fa-mobile-alt"></i>
                 <p class="btn-a_txt">
                     Choississez un restaurant
                 </p>
-            </div>
-            <div class="btn-a flex ">
+            </a>
+
+            <a class="btn-a flex " href="#">
                 <p class="list-number">2</p>
                 <i class="btn-a_icone fas fa-list"></i>
                 <p class="btn-a_txt">
                     Composez votre menu
                 </p>
-            </div>
-            <div class="btn-a flex ">
+            </a>
+
+            <a class="btn-a flex " href="#">
                 <p class="list-number">3</p>
                 <i class="btn-a_icone fas fa-store"></i>
                 <p class="btn-a_txt">
                     Dégustez au restaurant
                 </p>
-            </div>
+            </a>
         </div>
     </div>
 
@@ -109,7 +113,7 @@
     <div class="background--darker padding-top-2 padding-bottom-2">
         <div class=" container flex wrap">
 
-            <div class="box-prev">
+            <a class="box-prev">
                 <figure class="box-prev_figure">
                     <img class="box-prev_figure_img" src="img/img-client/petite/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="placeholder"/>
                 </figure>
@@ -129,9 +133,9 @@
                 <div class="box-prev_new-tag">
                     <p>Nouveau</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="box-prev">
+            <a class="box-prev">
                 <figure class="box-prev_figure">
                     <img class="box-prev_figure_img" src="img/img-client/petite/stil-u2Lp8tXIcjw-unsplash.jpg" alt="placeholder"/>
                 </figure>
@@ -151,9 +155,9 @@
                 <div class="box-prev_new-tag">
                     <p>Nouveau</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="box-prev">
+            <a class="box-prev">
                 <figure class="box-prev_figure">
                     <img class="box-prev_figure_img" src="img/img-client/petite/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="placeholder"/>
                 </figure>
@@ -173,9 +177,9 @@
                 <div class="box-prev_new-tag">
                     <p>Nouveau</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="box-prev">
+            <a class="box-prev">
                 <figure class="box-prev_figure">
                     <img class="box-prev_figure_img" src="img/img-client/petite/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="placeholder"/>
                 </figure>
@@ -195,9 +199,9 @@
                 <div class="box-prev_new-tag">
                     <p>Nouveau</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="box-prev mobile-disable">
+            <a class="box-prev mobile-disable">
                 <figure class="box-prev_figure">
                     <img class="box-prev_figure_img" src="https://placekitten.com/300/200" alt="placeholder"/>
                 </figure>
@@ -217,9 +221,9 @@
                 <div class="box-prev_new-tag">
                     <p> Fermé </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="box-prev mobile-disable">
+            <a class="box-prev mobile-disable">
                 <figure class="box-prev_figure">
                     <img class="box-prev_figure_img" src="https://placekitten.com/300/200" alt="placeholder"/>
                 </figure>
@@ -239,7 +243,8 @@
                 <div class="box-prev_new-tag">
                     <p> Fermé </p>
                 </div>
-            </div>
+            </a>
+
 
 
         </div>
@@ -261,7 +266,9 @@
 
             <div>
                 <ul>
-                    <li><a href="#" target="blank">Proposer un restaurant</a></li>
+                    <li><a href="#" target="blank">
+                        Proposer un restaurant
+                    </a></li>
                     <li><a href="#" target="blank">Devenir partenaire</a></li>
                 </ul>
             </div>
