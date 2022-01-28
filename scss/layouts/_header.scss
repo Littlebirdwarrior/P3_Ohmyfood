@@ -15,7 +15,7 @@ header {
        font-size: $font-size-big;
        color: $color-black;
        &:hover , &:active {
-         color: $color-primary;
+         @include hover-effect;
        }
      }
   }

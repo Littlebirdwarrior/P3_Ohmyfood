@@ -35,54 +35,12 @@ html {
 }
 
 
-/* responsive*/
-
-@media screen and (max-width: 750px) {
-  .container {
-    width: 99%;
-  }
-
-  .nom-du-restau {
-    margin: 0 20%;
-  }
-
-}
-
-@media screen and (min-width: 820px) and (max-width: 1380px) {
-  .container {
-    width: 720px;
-  }
-}
-
-@media screen and (max-width: 1247px) {
-  .mobile-disable {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1293px){
-
-  //.container {
-  //  > div {
-  //    margin: 0 auto;
-  //  }
-  //}
-
-}
-
-@media screen and (min-width: 1700px) {
-  .container {
-    max-width: 1090px;
-  }
-}
-
-
 
 /*------------------------------------- les éléments*/
 
 /*----la home */
 .home-top {
-  width: fit-content;
+  width: 100%;
   color: $color-dark;
   margin: 0 auto;
     i.fas {margin-right: 0.8rem}
@@ -93,23 +51,6 @@ html {
   padding: 8rem 1rem;
   text-align: center;
   @include text_shadow_hell;
-}
-
-@media screen and (max-width: 720px) {
-  .home-hero {
-    height: 50vh;
-    padding: 2rem;
-    text-align: center;
-  }
-
-}
-
-@media screen and (min-width: 720px) {
-  .desktop-bg {
-    //background: linear-gradient(rgba(253,253,253,0.8), rgba(255,255,255,0.5)) , url("https://placekitten.com/g/1900/700");
-    //background: url("/img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    background: linear-gradient(rgba(253,253,253,0.2), rgba(255,255,255,0.5)) , url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
-  }
 }
 
 /*le CTA*/
@@ -131,9 +72,9 @@ html {
     @include typo_bold;
     @include radius_round;
     @include shadow_2;
-    background: linear-gradient(45deg, $color-secondary,$color-primary);
+    @include gradient_1;
     &:hover{
-      background: linear-gradient(45deg, $color-primary,$color-secondary);
+      @include gradient_2;
       -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
       animation: bounce-top-fade 1.2s ease-in-out both;
     }
@@ -164,7 +105,7 @@ html {
       align-self: center;
     }
     &:hover {
-      background: pastel($color-secondary);
+      @include hover-effect;
       -webkit-animation: fadein 0.5s ease-in; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 0.5s ease-in; /* Firefox < 16 */
       -o-animation: fadein 0.5s ease-in; /* Opera < 12.1 */
@@ -285,9 +226,7 @@ html {
     z-index: 10;
     &:hover, &:active {
       opacity: 1;
-      @include gradient_2;
-      -webkit-background-clip: text;
-      color: transparent;
+      @include hover-effect
     }
   }
 
@@ -347,10 +286,11 @@ html {
      }
      &_heading {
        @include typo_bold;
+       @include ellipsis
      }
      &_definition {
        margin-top: 0.5rem;
-       overflow: hidden;
+       @include ellipsis
      }
      &_price {
        margin: 0.5rem 0 1rem 0;
@@ -377,17 +317,15 @@ html {
 /*L'animation*/
 .btn-c:hover {
     .btn-c_container {
-      width: 80%;
+      width: 220px;
     }
   .btn-c_container_definition{
     width: 95%;
     padding: 0 1rem 0 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @include ellipsis;
   }
   .btn-c_drop-over {
-    width: 5rem;
+    width: 50px;
     -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
     animation: scale-up-hor-right 0.5s ease-in-out;
 
@@ -409,15 +347,6 @@ html {
   height: 251px;
   margin-bottom: -100px;
 
-}
-
-@media screen and (min-width: 720px) {
-
-  .img-client_container {
-    width: 100%;
-    height: 477px;
-    margin-bottom: -200px;
-  }
 }
 
 .bg {
@@ -496,18 +425,6 @@ html {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 857px) {
-  .w-300 {
-    width: 280px;
-    margin: auto;
-  }
-
-  .heart {
-    padding-right: 10px;
-  }
-
-}
-
 /* les animations*/
 
 @-webkit-keyframes rotate-in-center {
@@ -549,8 +466,8 @@ html {
 
 @-webkit-keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(3rem);
-    transform: translateX(3rem);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
     opacity: 1;
   }
   100% {
@@ -776,6 +693,10 @@ html {
 
   &_4 {
     animation-delay: .8s;
+  }
+
+  &_5 {
+    animation-delay: 1.2s;
   }
 }
 

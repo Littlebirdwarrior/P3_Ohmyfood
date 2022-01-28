@@ -22,6 +22,13 @@
   font-weight: 700;
 }
 
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin gradient_1{
   background: linear-gradient(45deg, $color-secondary,$color-primary);
 }
@@ -68,4 +75,12 @@ $border-radius-btn:  0 15px 20px 50px;
   text-shadow: $color-light 1px 0 10px;
 }
 
+/*mes hover*/
+
+@mixin hover-effect {
+  @include gradient_2;
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
 

@@ -36,6 +36,66 @@ a {
   text-decoration: none;
 }
 
+/* container et header*/
+@media screen and (max-width: 750px) {
+  .container {
+    width: 80% !important;
+  }
+
+  .nom-du-restau {
+    margin: 0 20%;
+  }
+
+  .resp-padding-0 {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 820px) and (max-width: 1380px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 1247px) {
+  .mobile-disable {
+    display: none;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .container {
+    max-width: 1090px;
+  }
+}
+/* les elements*/
+@media screen and (min-width: 720px) {
+  .desktop-bg {
+    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
+  }
+}
+@media screen and (max-width: 720px) {
+  .home-hero {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+/* les page clients*/
+@media screen and (min-width: 720px) {
+  .img-client_container {
+    width: 100%;
+    height: 477px;
+    margin-bottom: -200px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 857px) {
+  .w-300 {
+    width: 280px;
+    margin: auto;
+  }
+
+  .heart {
+    padding-right: 10px;
+  }
+}
 /*--------------------------mes variables*/
 /*MES COULEURS*/
 /*--------------------------------MES MIXINS*/
@@ -44,6 +104,7 @@ a {
 /*mes font-size*/
 /*Mes radius*/
 /*mes ombres*/
+/*mes hover*/
 html {
   margin: 0;
   padding: 0;
@@ -79,35 +140,10 @@ header, main, footer {
   max-width: 1560px;
 }
 
-/* responsive*/
-@media screen and (max-width: 750px) {
-  .container {
-    width: 99%;
-  }
-
-  .nom-du-restau {
-    margin: 0 20%;
-  }
-}
-@media screen and (min-width: 820px) and (max-width: 1380px) {
-  .container {
-    width: 720px;
-  }
-}
-@media screen and (max-width: 1247px) {
-  .mobile-disable {
-    display: none;
-  }
-}
-@media screen and (min-width: 1700px) {
-  .container {
-    max-width: 1090px;
-  }
-}
 /*------------------------------------- les éléments*/
 /*----la home */
 .home-top {
-  width: fit-content;
+  width: 100%;
   color: #393939;
   margin: 0 auto;
 }
@@ -124,18 +160,6 @@ header, main, footer {
   text-shadow: #F7F7F7 1px 0 10px;
 }
 
-@media screen and (max-width: 720px) {
-  .home-hero {
-    height: 50vh;
-    padding: 2rem;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 720px) {
-  .desktop-bg {
-    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
-  }
-}
 /*le CTA*/
 .button {
   width: 280px;
@@ -168,7 +192,7 @@ header, main, footer {
   background: linear-gradient(45deg, #DA86DF, #9B77D4);
 }
 .button > button:hover {
-  background: linear-gradient(45deg, #9B77D4, #DA86DF);
+  background: radial-gradient(#DA86DF, #9B77D4);
   -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
   animation: bounce-top-fade 1.2s ease-in-out both;
 }
@@ -200,7 +224,9 @@ header, main, footer {
   align-self: center;
 }
 .btn-a:hover {
-  background: #fae9fb;
+  background: radial-gradient(#DA86DF, #9B77D4);
+  -webkit-background-clip: text;
+  color: transparent;
   -webkit-animation: fadein 0.5s ease-in;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 0.5s ease-in;
@@ -391,10 +417,15 @@ header, main, footer {
   font-weight: 300;
   font-size: 15px;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn-c_container_definition {
   margin-top: 0.5rem;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn-c_container_price {
   margin: 0.5rem 0 1rem 0;
@@ -421,7 +452,7 @@ header, main, footer {
 
 /*L'animation*/
 .btn-c:hover .btn-c_container {
-  width: 80%;
+  width: 220px;
 }
 .btn-c:hover .btn-c_container_definition {
   width: 95%;
@@ -431,7 +462,7 @@ header, main, footer {
   text-overflow: ellipsis;
 }
 .btn-c:hover .btn-c_drop-over {
-  width: 5rem;
+  width: 50px;
   -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
   animation: scale-up-hor-right 0.5s ease-in-out;
 }
@@ -451,13 +482,6 @@ header, main, footer {
   margin-bottom: -100px;
 }
 
-@media screen and (min-width: 720px) {
-  .img-client_container {
-    width: 100%;
-    height: 477px;
-    margin-bottom: -200px;
-  }
-}
 .bg-alafrançaise {
   background: url("/img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-size: cover;
@@ -528,16 +552,6 @@ header, main, footer {
   left: 0;
 }
 
-@media screen and (min-width: 300px) and (max-width: 857px) {
-  .w-300 {
-    width: 280px;
-    margin: auto;
-  }
-
-  .heart {
-    padding-right: 10px;
-  }
-}
 /* les animations*/
 @-webkit-keyframes rotate-in-center {
   0% {
@@ -577,8 +591,8 @@ header, main, footer {
 }
 @-webkit-keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(3rem);
-    transform: translateX(3rem);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
     opacity: 1;
   }
   100% {
@@ -805,6 +819,9 @@ header, main, footer {
 .slide-top_4 {
   animation-delay: 0.8s;
 }
+.slide-top_5 {
+  animation-delay: 1.2s;
+}
 
 @keyframes slide-top {
   0% {
@@ -996,17 +1013,14 @@ header, main, footer {
   }
 }
 /* le footer*/
-footer div {
-  padding: 0.5rem 0 0.2rem;
+footer {
+  padding: 1rem;
 }
 footer div nav div h4 {
   font-size: 20px;
   font-family: "Shrikhand", sans-serif;
   letter-spacing: 1px;
-  margin: 5px auto 0;
-}
-footer div {
-  margin: 0 auto;
+  margin: 0 0 5px;
 }
 footer div nav {
   margin: 0 auto;
@@ -1014,20 +1028,23 @@ footer div nav {
 footer div nav ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: fit-content;
+  height: fit-content;
   padding-left: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 footer div nav ul li {
   list-style: none;
-  margin: 0 auto 1rem;
+  margin: 5px 0;
 }
 footer div nav ul li a {
   color: inherit;
   text-decoration: none;
 }
 footer div nav ul li a:hover {
-  color: #DA86DF;
+  background: radial-gradient(#DA86DF, #9B77D4);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* le header*/
@@ -1046,7 +1063,9 @@ header > a > i {
   color: #000;
 }
 header > a > i:hover, header > a > i:active {
-  color: #9B77D4;
+  background: radial-gradient(#DA86DF, #9B77D4);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .loader-page {
