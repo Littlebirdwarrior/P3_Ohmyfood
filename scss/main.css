@@ -166,7 +166,7 @@ header, main, footer {
   margin: 10px auto;
   white-space: nowrap;
 }
-.button > button {
+.button a > button {
   display: block;
   width: fit-content;
   height: 3rem;
@@ -191,7 +191,7 @@ header, main, footer {
   box-shadow: 2px 3px 20px #dfdfdf;
   background: linear-gradient(45deg, #DA86DF, #9B77D4);
 }
-.button > button:hover {
+.button a > button:hover {
   background: radial-gradient(#DA86DF, #9B77D4);
   -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
   animation: bounce-top-fade 1.2s ease-in-out both;
@@ -224,9 +224,7 @@ header, main, footer {
   align-self: center;
 }
 .btn-a:hover {
-  background: radial-gradient(#DA86DF, #9B77D4);
-  -webkit-background-clip: text;
-  color: transparent;
+  background-color: #fae9fb;
   -webkit-animation: fadein 0.5s ease-in;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 0.5s ease-in;

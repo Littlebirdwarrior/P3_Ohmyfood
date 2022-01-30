@@ -84,3 +84,7 @@ $border-radius-btn:  0 15px 20px 50px;
 
 }
 
+@mixin pastel-secondary {
+  background-color: pastel($color-secondary);
+}
+
