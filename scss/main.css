@@ -42,18 +42,14 @@ a {
     width: 75% !important;
   }
 
-  .nom-du-restau {
-    margin: 0 20%;
-  }
-
   .resp-padding-0 {
     padding-left: 10px;
     padding-right: 0;
   }
 }
-@media screen and (min-width: 820px) and (max-width: 1380px) {
+@media screen and (min-width: 750px) and (max-width: 1380px) {
   .container {
-    width: 720px;
+    width: 620px;
   }
 }
 @media screen and (max-width: 1247px) {
@@ -169,7 +165,6 @@ header, main, footer {
   width: fit-content;
   height: 3rem;
   padding: 1rem 2rem;
-  margin: 3rem 0;
   font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
@@ -363,8 +358,6 @@ header, main, footer {
   filter: grayscale(50%);
   background: linear-gradient(0.25turn, #f2f2f2, #fcfcfc, #eaeaea, #e3e3e3);
   border: 1px solid #ededed;
-  animation: none;
-  -webkit-animation: none;
 }
 .mobile-disable .box-prev_figure {
   opacity: 0.5;
@@ -528,7 +521,8 @@ header, main, footer {
 .nom-du-restau {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 280px;
+  margin: 0 auto;
 }
 .nom-du-restau > h1 {
   font-family: "Shrikhand", sans-serif;

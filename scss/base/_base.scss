@@ -63,7 +63,6 @@ html {
        width: fit-content;
        height: 3rem;
        padding: 1rem 2rem;
-       margin: 3rem 0;
        font-size: $font-size-medium;
        letter-spacing: 1px;
        text-align: center;
@@ -240,8 +239,6 @@ html {
   filter: grayscale(50%);
   background: linear-gradient( 0.25turn, darken($color-light, 2%),lighten($color-light, 2%), darken($color-light, 5%), darken($color-light, 8%));
   border: 1px solid darken($color-light, 4%);
-  animation: none;
-  -webkit-animation: none;
   .box-prev_figure {
     opacity: 0.5;
   }
@@ -405,7 +402,8 @@ html {
 .nom-du-restau {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: $all-element-size;
+  margin: 0 auto;
   >h1 {
     font-family: "Shrikhand", sans-serif;
     font-size: $font-size-big;

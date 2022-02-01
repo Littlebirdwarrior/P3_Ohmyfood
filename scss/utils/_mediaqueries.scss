@@ -6,10 +6,6 @@
     width:75% !important;
   }
 
-  .nom-du-restau {
-    margin: 0 20%;
-  }
-
   .resp-padding-0 {
     padding-left: 10px;
     padding-right: 0;
@@ -17,9 +13,9 @@
 
 }
 
-@media screen and (min-width: 820px) and (max-width: 1380px) {
+@media screen and (min-width: 750px) and (max-width: 1380px) {
   .container {
-    width: 720px;
+    width: 620px;
   }
 }
 
