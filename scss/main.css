@@ -39,7 +39,7 @@ a {
 /* container et header*/
 @media screen and (max-width: 750px) {
   .container {
-    width: 80% !important;
+    width: 75% !important;
   }
 
   .nom-du-restau {
@@ -61,7 +61,7 @@ a {
     display: none;
   }
 }
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1400px) {
   .container {
     max-width: 1090px;
   }
@@ -136,8 +136,6 @@ header, main, footer {
 .container {
   margin: 0 auto;
   padding: 1rem 0;
-  width: 65%;
-  max-width: 1560px;
 }
 
 /*------------------------------------- les éléments*/
@@ -171,6 +169,7 @@ header, main, footer {
   width: fit-content;
   height: 3rem;
   padding: 1rem 2rem;
+  margin: 3rem 0;
   font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
@@ -304,12 +303,12 @@ header, main, footer {
 .box-prev_description .heart .far {
   position: absolute;
   top: 14px;
-  left: 230px;
+  left: 245px;
 }
 .box-prev_description .heart .fas {
   position: absolute;
   top: 14px;
-  left: 230px;
+  left: 245px;
 }
 .box-prev_new-tag {
   width: fit-content;
@@ -407,6 +406,9 @@ header, main, footer {
 .btn-c_container p {
   width: 100%;
   padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn-c_container_heading {
   font-family: "Roboto", sans-serif;
@@ -415,9 +417,6 @@ header, main, footer {
   font-weight: 300;
   font-size: 15px;
   font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .btn-c_container_definition {
   margin-top: 0.5rem;
@@ -450,7 +449,7 @@ header, main, footer {
 
 /*L'animation*/
 .btn-c:hover .btn-c_container {
-  width: 220px;
+  width: 200px;
 }
 .btn-c:hover .btn-c_container_definition {
   width: 95%;
@@ -460,15 +459,16 @@ header, main, footer {
   text-overflow: ellipsis;
 }
 .btn-c:hover .btn-c_drop-over {
-  width: 50px;
+  width: 65px;
   -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
   animation: scale-up-hor-right 0.5s ease-in-out;
+  transform-origin: right center;
 }
 .btn-c:hover .btn-c_drop-over i {
   opacity: 1;
   position: relative;
   top: 39%;
-  left: 37%;
+  left: 39%;
   -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -589,8 +589,8 @@ header, main, footer {
 }
 @-webkit-keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
     opacity: 1;
   }
   100% {

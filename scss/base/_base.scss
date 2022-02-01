@@ -30,8 +30,6 @@ html {
 .container {
   margin: 0 auto;
   padding: 1rem 0;
-  width: 65%;
-  max-width: 1560px;
 }
 
 
@@ -65,6 +63,7 @@ html {
        width: fit-content;
        height: 3rem;
        padding: 1rem 2rem;
+       margin: 3rem 0;
        font-size: $font-size-medium;
        letter-spacing: 1px;
        text-align: center;
@@ -74,7 +73,6 @@ html {
        @include radius_round;
        @include shadow_2;
        @include gradient_1;
-
        &:hover {
          @include gradient_2;
          -webkit-animation: bounce-top-fade 1.2s ease-in-out both;
@@ -116,9 +114,10 @@ html {
         .btn-a_icone {
           color: darken($color-primary, 10%) ;
         }
-
     }
 }
+
+
 
 .list-number {
   width: 30px;
@@ -179,12 +178,12 @@ html {
               .far {
                 position: absolute;
                 top: 14px;
-                left: 230px;
+                left: 245px;
                       }
                 .fas {
                   position: absolute;
                   top: 14px;
-                  left: 230px;
+                  left: 245px;
                     }
 
             }
@@ -285,10 +284,10 @@ html {
      p {
        width: 100%;
        padding: 0;
+       @include ellipsis
      }
      &_heading {
        @include typo_bold;
-       @include ellipsis
      }
      &_definition {
        margin-top: 0.5rem;
@@ -319,7 +318,7 @@ html {
 /*L'animation*/
 .btn-c:hover {
     .btn-c_container {
-      width: 220px;
+      width: 200px;
     }
   .btn-c_container_definition{
     width: 95%;
@@ -327,15 +326,16 @@ html {
     @include ellipsis;
   }
   .btn-c_drop-over {
-    width: 50px;
+    width: 65px;
     -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
     animation: scale-up-hor-right 0.5s ease-in-out;
+    transform-origin: right center;
 
     i {
       opacity: 1;
       position: relative;
       top: 39%;
-      left: 37%;
+      left: 39%;
       -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
       animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     }
@@ -468,8 +468,8 @@ html {
 
 @-webkit-keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
     opacity: 1;
   }
   100% {

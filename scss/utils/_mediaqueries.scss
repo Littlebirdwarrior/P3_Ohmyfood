@@ -3,7 +3,7 @@
 
 @media screen and (max-width: 750px) {
   .container {
-    width: 80% !important;
+    width:75% !important;
   }
 
   .nom-du-restau {
@@ -29,7 +29,7 @@
   }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1400px) {
   .container {
     max-width: 1090px;
   }
@@ -43,7 +43,8 @@
   .desktop-bg {
     //background: linear-gradient(rgba(253,253,253,0.8), rgba(255,255,255,0.5)) , url("https://placekitten.com/g/1900/700");
     //background: url("/img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    background: linear-gradient(rgba(253,253,253,0.2), rgba(255,255,255,0.5)) , url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
+    background: linear-gradient(rgba(253,253,253,0.2), rgba(255,255,255,0.5)) ,
+    url("../../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
   }
 }
 
