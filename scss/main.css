@@ -33,7 +33,7 @@
 /* les elements*/
 @media screen and (min-width: 720px) {
   .desktop-bg {
-    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
+    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../img/img-client/grande/edward-howell-vvUy1hWVYEA-unsplash.jpg") top no-repeat;
   }
 }
 @media screen and (max-width: 720px) {
