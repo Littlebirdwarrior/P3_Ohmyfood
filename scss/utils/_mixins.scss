@@ -84,6 +84,10 @@ $border-radius-btn:  0 15px 20px 50px;
 
 }
 
+@mixin darken-primary {
+  color: darken($color-primary, 10%);
+}
+
 @mixin pastel-secondary {
   background-color: pastel($color-secondary);
 }
