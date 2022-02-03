@@ -33,7 +33,7 @@
 /* les elements*/
 @media screen and (min-width: 720px) {
   .desktop-bg {
-    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../../img/img-client/grande/edward-howell-vvUy1hWVYEA-unsplash.jpg") top no-repeat;
+    background: linear-gradient(rgba(253, 253, 253, 0.2), rgba(255, 255, 255, 0.5)), url("../img/img-client/grande/edward-howell-vvUy1hWVYEA-unsplash.jpg") top no-repeat;
   }
 }
 @media screen and (max-width: 720px) {
@@ -721,19 +721,19 @@ header, main, footer {
 }
 
 .bg-alafrançaise {
-  background: url("/img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background: url("../img/img-client/grande/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-size: cover;
 }
 .bg-lanoteenchantee {
-  background: url("/img/img-client/grande/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background: url("../img/img-client/grande/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: cover;
 }
 .bg-lapalettedugout {
-  background: url("/img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background: url("../img/img-client/grande/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: cover;
 }
 .bg-ledelicedessens {
-  background: url("/img/img-client/grande/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background: url("../img/img-client/grande/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-size: cover;
 }
 
