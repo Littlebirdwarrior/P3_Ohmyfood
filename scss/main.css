@@ -704,6 +704,18 @@ header, main, footer {
   animation: scale-up-hor-right 0.5s ease-in-out;
   transform-origin: right center;
 }
+@-webkit-keyframes scale-up-hor-right {
+  0% {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .btn-c:hover .btn-c_drop-over i {
   opacity: 1;
   position: relative;
@@ -711,6 +723,42 @@ header, main, footer {
   left: 39%;
   -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@-webkit-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
 }
 
 /*------les pages client*/
@@ -791,55 +839,6 @@ header, main, footer {
   left: 0;
 }
 
-/* les animations*/
-@-webkit-keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-@-moz-keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-@keyframes rotate-in-center {
-  0% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes scale-up-hor-right {
-  0% {
-    -webkit-transform: translateX(40px);
-    transform: translateX(40px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 /*---------------------------------------- les flexboxes*/
 .flex {
   display: flex;
