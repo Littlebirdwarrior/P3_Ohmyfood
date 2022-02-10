@@ -1,0 +1,11 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "author": "Camille Dorland",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./scss/main.scss:./scss/main.css -w --style compressed",
+    "prefix": "postcss ./scss/main.css --use autoprefixer -d ./scss/"
+  },
+  "browserslist": "last 4 versions"
+}

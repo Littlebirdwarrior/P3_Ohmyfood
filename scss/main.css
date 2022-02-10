@@ -107,25 +107,16 @@ a {
 /*mes hover*/
 /*-----------mes animations*/
 /*le hover des box et des boutons-a*/
-/*les boutons-a*/
 .fadein:hover {
   /* l'animation*/
-  -webkit-animation: fadein 2s ease-in;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s ease-in;
-  /* Firefox < 16 */
-  -o-animation: fadein 2s ease-in;
-  /* Opera < 12.1 */
-  animation: fadein 2s ease-in;
+  animation: fadein 0.3s;
   animation-delay: 0.2s;
 }
 
-/* les box*/
 /*le hover des call to action*/
 /*l'aparition des content */
 .slide-top {
   opacity: 0;
-  -webkit-animation: slide-top 1.75s ease-in-out forwards 0.1s;
   animation: slide-top 1.75s ease-in-out forwards 0.1s;
 }
 .slide-top_1 {
@@ -152,17 +143,14 @@ a {
 
 @keyframes slide-top {
   0% {
-    -webkit-transform: translateY(7px);
     transform: translateY(7px);
     opacity: 0;
   }
   50% {
-    -webkit-transform: translateY(2.5px);
     transform: translateY(2.5px);
     opacity: 0.5;
   }
   100% {
-    -webkit-transform: translateY(-2.5px);
     transform: translateY(-2.5px);
     opacity: 1;
   }
@@ -253,107 +241,8 @@ header, main, footer {
 }
 .button a > button:hover {
   background: radial-gradient(#DA86DF, #9B77D4);
-  -webkit-animation: bounce-top-fade 1.2s ease-in-out;
   animation: bounce-top-fade 1.2s ease-in-out;
   animation-delay: 0.2s;
-}
-@-webkit-keyframes bounce-top-fade {
-  0% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0.3;
-  }
-  24% {
-    opacity: 0.8;
-  }
-  40% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-3px);
-    transform: translateY(-3px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-1px);
-    transform: translateY(-1px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%, 55%, 75%, 87% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-}
-@-moz-keyframes bounce-top-fade {
-  0% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0.3;
-  }
-  24% {
-    opacity: 0.8;
-  }
-  40% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  82% {
-    -webkit-transform: translateY(-3px);
-    transform: translateY(-3px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    -webkit-transform: translateY(-1px);
-    transform: translateY(-1px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  25%, 55%, 75%, 87% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
 }
 @keyframes bounce-top-fade {
   0% {
@@ -434,54 +323,18 @@ header, main, footer {
 .btn-a:hover {
   color: #7f50c8;
   background-color: #fae9fb;
-  -webkit-animation: fadein 0.3s ease-in;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 0.3s ease-in;
-  /* Firefox < 16 */
-  -o-animation: fadein 0.3s ease-in;
-  /* Opera < 12.1 */
-  animation: fadein 0.3s ease-in;
-  animation-delay: 0.2s;
+  transform: scale(1.1);
+  transition: transform 330ms ease-in-out;
+  animation-delay: 2ms;
+  animation-name: pulse;
 }
-@-webkit-keyframes fadein {
+@keyframes pulse {
   0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.8;
+    transform: scale(0.8);
+    opacity: 0.2;
   }
   100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
+    transform: scale(1.1);
     opacity: 1;
   }
 }
@@ -579,6 +432,22 @@ header, main, footer {
   top: -13rem;
   left: 65%;
   z-index: 2;
+}
+.box-prev:hover {
+  transform: scale(1.1);
+  transition: transform 330ms ease-in-out;
+  animation-delay: 2ms;
+  animation-name: pulse;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 }
 
 /* la class heart est à part car je vais la réutiliser après*/
@@ -700,18 +569,15 @@ header, main, footer {
 }
 .btn-c:hover .btn-c_drop-over {
   width: 65px;
-  -webkit-animation: scale-up-hor-right 0.5s ease-in-out;
   animation: scale-up-hor-right 0.5s ease-in-out;
   transform-origin: right center;
 }
-@-webkit-keyframes scale-up-hor-right {
+@keyframes scale-up-hor-right {
   0% {
-    -webkit-transform: translateX(40px);
     transform: translateX(40px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -721,41 +587,34 @@ header, main, footer {
   position: relative;
   top: 39%;
   left: 39%;
-  -webkit-animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: rotate-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @-webkit-keyframes rotate-in-center {
   0% {
-    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 1;
   }
 }
 @-moz-keyframes rotate-in-center {
   0% {
-    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 1;
   }
 }
 @keyframes rotate-in-center {
   0% {
-    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 1;
   }

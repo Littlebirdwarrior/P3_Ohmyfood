@@ -74,7 +74,7 @@ html {
        @include gradient_1;
        &:hover {
          @include gradient_2;
-         @include bounce-top-fade;
+         @include bounce;
        }
      }
    }
@@ -105,7 +105,7 @@ html {
     &:hover {
       @include darken-primary;
       @include pastel-secondary;
-      @include fadein;
+      @include pulse;
         .btn-a_icone {
           @include darken-primary;
         }
@@ -196,6 +196,9 @@ html {
         left:65%;
         z-index:2;
       }
+  &:hover {
+    @include pulse;
+  }
 }
 
 /* la class heart est à part car je vais la réutiliser après*/
