@@ -76,7 +76,7 @@ figure, img {
   padding: 0;
 }
 
-p, i, h3 {
+p, i, h2 {
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -208,7 +208,7 @@ header, main, footer {
   margin: 10px auto;
   white-space: nowrap;
 }
-.button a > button {
+.button button {
   display: block;
   width: fit-content;
   height: 3rem;
@@ -233,7 +233,7 @@ header, main, footer {
   box-shadow: 2px 3px 20px #dfdfdf;
   background: linear-gradient(45deg, #DA86DF, #9B77D4);
 }
-.button a > button:hover {
+.button button:hover {
   background: radial-gradient(#DA86DF, #9B77D4);
   animation: bounce-top-fade 1.2s ease-in-out;
   animation-delay: 0.2s;
@@ -398,10 +398,10 @@ header, main, footer {
   padding: 2% 5%;
   position: relative;
 }
-.box-prev_description h3 {
+.box-prev_description h2 {
   font-size: 15px;
 }
-.box-prev_description h3 strong {
+.box-prev_description h2 strong {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   line-height: 1.2rem;
@@ -859,7 +859,7 @@ header, main, footer {
 footer {
   padding: 1rem;
 }
-footer div nav div h4 {
+footer div nav div h3 {
   font-size: 20px;
   font-family: "Shrikhand", sans-serif;
   letter-spacing: 1px;

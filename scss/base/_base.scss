@@ -57,27 +57,25 @@ html {
   width: $all-element-size;
   margin: 10px auto;
   white-space: nowrap;
-   a {
-     > button {
-       display: block;
-       width: fit-content;
-       height: 3rem;
-       padding: 1rem 2rem;
-       font-size: $font-size-medium;
-       letter-spacing: 1px;
-       text-align: center;
-       border: none;
-       @include typo_white;
-       @include typo_bold;
-       @include radius_round;
-       @include shadow_2;
-       @include gradient_1;
-       &:hover {
-         @include gradient_2;
-         @include bounce;
-       }
-     }
-   }
+  button {
+    display: block;
+    width: fit-content;
+    height: 3rem;
+    padding: 1rem 2rem;
+    font-size: $font-size-medium;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    @include typo_white;
+    @include typo_bold;
+    @include radius_round;
+    @include shadow_2;
+    @include gradient_1;
+    &:hover {
+      @include gradient_2;
+      @include bounce;
+    }
+  }
 }
 
 /* le bouton-a : gris-violet*/
@@ -162,7 +160,7 @@ html {
           line-height: 1.5rem;
           padding: 2% 5%;
           position: relative;
-            h3{
+            h2{
                 font-size: $font-size-courant;
                 strong
                 {
