@@ -23,30 +23,26 @@
   }
 }
 
-@-webkit-keyframes puff-in-center {
+@keyframes puff-in-center {
   0% {
-    -webkit-transform: scale(0.8);
     transform: scale(0.8);
     -webkit-filter: hue-rotate(0deg);
     filter:hue-rotate(0deg);
   }
 
   20% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-filter: hue-rotate(0deg);
     filter:hue-rotate(0deg);
   }
 
   50% {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
     -webkit-filter: hue-rotate(50deg);
     filter: hue-rotate(50deg);
   }
 
   100% {
-    -webkit-transform: scale(0.9);
     transform: scale(0.9);
     -webkit-filter: hue-rotate(-50deg);
     filter:hue-rotate(-50deg);
@@ -59,7 +55,7 @@
   animation-iteration-count: 1;
 }
 
-@-webkit-keyframes disapear{
+@keyframes disapear{
 
   0% {
     opacity: 1;
