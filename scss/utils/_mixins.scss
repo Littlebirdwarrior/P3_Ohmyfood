@@ -166,7 +166,6 @@ $border-radius-btn:  0 15px 20px 50px;
 
     @keyframes bounce-top-fade  {
       0% {
-        -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
         -webkit-animation-timing-function: ease-in;
         animation-timing-function: ease-in;
@@ -176,25 +175,21 @@ $border-radius-btn:  0 15px 20px 50px;
         opacity: 0.8;
       }
       40% {
-        -webkit-transform: translateY(-8px);
         transform: translateY(-8px);
         -webkit-animation-timing-function: ease-in;
         animation-timing-function: ease-in;
       }
       65% {
-        -webkit-transform: translateY(-6px);
         transform: translateY(-6px);
         -webkit-animation-timing-function: ease-in;
         animation-timing-function: ease-in;
       }
       82% {
-        -webkit-transform: translateY(-3px);
         transform: translateY(-3px);
         -webkit-animation-timing-function: ease-in;
         animation-timing-function: ease-in;
       }
       93% {
-        -webkit-transform: translateY(-1px);
         transform: translateY(-1px);
         -webkit-animation-timing-function: ease-in;
         animation-timing-function: ease-in;
@@ -203,13 +198,11 @@ $border-radius-btn:  0 15px 20px 50px;
       55%,
       75%,
       87% {
-        -webkit-transform: translateY(0px);
         transform: translateY(0px);
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
       }
       100% {
-        -webkit-transform: translateY(0px);
         transform: translateY(0px);
         -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
@@ -286,27 +279,6 @@ $border-radius-btn:  0 15px 20px 50px;
 
   @mixin rotate-in-center {
     animation: rotate-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-
-    @-webkit-keyframes rotate-in-center {
-      0% {
-        transform: rotate(-360deg);
-        opacity: 1;
-      }
-      100% {
-        transform: rotate(0);
-        opacity: 1;
-      }
-    }
-    @-moz-keyframes rotate-in-center {
-      0% {
-        transform: rotate(-360deg);
-        opacity: 1;
-      }
-      100% {
-        transform: rotate(0);
-        opacity: 1;
-      }
-    }
     @keyframes rotate-in-center {
       0% {
         transform: rotate(-360deg);
