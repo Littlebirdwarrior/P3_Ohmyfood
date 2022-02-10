@@ -107,12 +107,6 @@ a {
 /*mes hover*/
 /*-----------mes animations*/
 /*le hover des box et des boutons-a*/
-.fadein:hover {
-  /* l'animation*/
-  animation: fadein 0.3s;
-  animation-delay: 0.2s;
-}
-
 /*le hover des call to action*/
 /*l'aparition des content */
 .slide-top {
@@ -246,7 +240,7 @@ header, main, footer {
 }
 @keyframes bounce-top-fade {
   0% {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 0.3;
@@ -255,32 +249,32 @@ header, main, footer {
     opacity: 0.8;
   }
   40% {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   65% {
-    transform: translateY(-6px);
+    transform: translateY(-6px) scale(1.1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   82% {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   93% {
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   25%, 55%, 75%, 87% {
-    transform: translateY(0px);
+    transform: translateY(0px) scale(1.1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px) scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     opacity: 1;
@@ -320,14 +314,31 @@ header, main, footer {
   transition: transform 330ms ease-in-out;
   animation-delay: 2ms;
   animation-name: pulse;
+  animation: fadein 330ms ease-in-out;
+  animation-delay: 2ms;
 }
 @keyframes pulse {
   0% {
-    transform: scale(0.8);
-    opacity: 0.2;
+    transform: scale(1);
+  }
+  98% {
+    transform: scale(1.1);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -353,7 +364,7 @@ header, main, footer {
   justify-content: center;
   align-content: baseline;
   align-self: center;
-  margin-left: -45px;
+  margin-left: -40px;
 }
 
 /* la box-prev : pour présenter les différents restaurants*/
@@ -434,12 +445,13 @@ header, main, footer {
 }
 @keyframes pulse {
   0% {
-    transform: scale(0.8);
-    opacity: 0.2;
+    transform: scale(1);
+  }
+  98% {
+    transform: scale(1.1);
   }
   100% {
-    transform: scale(1.1);
-    opacity: 1;
+    transform: scale(1);
   }
 }
 

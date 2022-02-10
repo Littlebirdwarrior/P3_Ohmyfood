@@ -106,6 +106,7 @@ html {
       @include darken-primary;
       @include pastel-secondary;
       @include pulse;
+      @include fadein;
         .btn-a_icone {
           @include darken-primary;
         }
@@ -127,7 +128,7 @@ html {
   justify-content: center;
   align-content: baseline;
   align-self: center;
-  margin-left: -45px;
+  margin-left: -40px;
 }
 
 
