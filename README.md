@@ -1,4 +1,4 @@
-# Projet 3 - Ohmyfood
+# Intégration SCSS - Ohmyfood
 
 **Projet-Openclassrooms** : <br />
 Parcours Web développeur - 2021
